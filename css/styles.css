@@ -1,7 +1,11 @@
 .name {
-    color: black;
+    color: #FFBB5C;
 }
 
 .dp {
     border-radius: 50%;
   }
+
+.title-section {
+    background-color: #C63D2F;
+}
