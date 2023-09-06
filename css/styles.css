@@ -17,6 +17,7 @@ footer {
   }
 
 #tum-courses {
+    display: none;
     width: 50%;
     padding: 5px 0;
     text-align: left;
