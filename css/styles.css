@@ -26,8 +26,7 @@ footer {
 }
 
 .navpanel {
-    font-size: 2vw;
-    width: 70%;
+    font-size: 1.75vw;
     text-align: center;
     display: block;
     margin-left: auto;
@@ -76,4 +75,5 @@ aside ul li {
     background-color: #f6f6f6; /* Add a grey background color */
     padding: 12px; /* Add some padding */
     opacity: 75%;
+    font-size: 40px;
 }
