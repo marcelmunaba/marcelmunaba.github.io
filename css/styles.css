@@ -1,15 +1,66 @@
+
 .name {
     color: #FFBB5C;
+    font-size: 4vw;
 }
 
+body {
+    background-color: #C63D2F;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+    color: #FFBB5C;
+}
 .dp {
     border-radius: 50%;
   }
 
-.title-section {
-    background-color: #C63D2F;
+#tum-courses {
+    width: 50%;
+    padding: 5px 0;
+    text-align: left;
+    background-color: #FF9B50;
+    margin-top: 20px;
 }
 
+.navpanel {
+    font-size: 2vw;
+    width: 70%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 1.75vw;
+}
+.title-section {
+    background-color: #E25E3E;
+}
+
+.title-section .dp {
+    background-color: #E25E3E;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    height: 15%;
+}
+
+h2 {
+    color: #FFBB5C;
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 2vw;
+}
+
+h4 {
+    font-size: 1.75vw;
+}
 .sidebar {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */

@@ -3,11 +3,23 @@
 <head>
     <title>Marcel Giovanni Munaba</title>
     <link href="css/styles.css" rel="stylesheet">
+
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <header>
         <aside>
-            <ul class="sidebar">
+            <li class="hide_button"><button id="hidebutton" onclick="hidebutton()">Hide/Show</button>
+                <style>
+                .hide_button {
+                    list-style-type: none;
+                    position: fixed;
+                    right: 0;
+                    margin-top: -1px;
+                    opacity: 100%;
+                }
+                </style>
+            <ul class="sidebar" id="sidebar-id">
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#Education">Education</a></li>
             <li><a href="#Experience">Experience</a></li>
@@ -19,10 +31,11 @@
         </aside>
     </header>
     <section class="title-section" id="home">
+        <img class="dp" src="assets/IMG-4212.jpg" alt="Display Photo" width="150px" height="150px"> 
         <div>
-            <h1 class="name"><img class="dp" src="assets/IMG-4212.jpg" alt="Display Photo" width="150px" height="150px">  Marcel Giovanni Munaba</h1>
+            <h1 class="name">Marcel Giovanni Munaba</h1>
             <h4 class="subheading">Student at the Technical University of Munich, Germany</h4>  
-            <nav>
+            <nav class="navpanel">
                 <a class="active" href="#home">Home</a>
                 <a href="#Education">Education</a>
                 <a href="#Experience">Experience</a>
@@ -41,8 +54,27 @@
         <div class="">
             <h3 class="">Technical University of Munich</h3>
             <div class="">Bachelor of Science</div>
-            <div>Computer Science</div>
-            <p>GPA: -</p>
+            <div>Computer Science (Currently on the 3rd Semester)</div>
+            <p>Grade: 2.95 - Last update : September 2023</p>
+            <div>Courses Taken :  <button onclick="courses()">Show/Hide</button></div>
+            <div id="tum-courses">
+                <ul>
+                    <li>
+                        Einführung in die Informatik (Introduction to Computer Science) - IN0001
+                    </li>
+                    <li>
+                        Einführung in die Rechnerarchitektur (Introduction to Computer Architecture) - IN0004
+                    </li>
+                    <li>
+                        Diskrete Strukturen (Discrete Structures) - IN___
+                    </li>
+                    <li>
+                        Praktikum : Grundlagen der Programmierung (Lab Course : Fundamentals of Programming) - IN___
+                    </li>
+                </ul>
+                
+            
+            </div>
         </div>
         <div class="">
             <h3 class="">Hochschule Kaiserslautern</h3>
