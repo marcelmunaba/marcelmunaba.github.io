@@ -1,43 +1,16 @@
-
-.name {
-    color: #FFBB5C;
-    font-size: 4vw;
-}
-
 body {
     background-color: #C63D2F;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Manrope', sans-serif;
 }
 
-footer {
-    color: #FFBB5C;
-}
-.dp {
-    border-radius: 50%;
-  }
-
-#tum-courses {
-    display: none;
-    width: 50%;
-    padding: 5px 0;
-    text-align: left;
-    background-color: #FF9B50;
-    margin-top: 20px;
-}
-
-.navpanel {
-    font-size: 1.75vw;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p {
-    font-size: 1.75vw;
-}
-.title-section {
+section {
     background-color: #E25E3E;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin: 5px;
 }
 
 .title-section .dp {
@@ -49,18 +22,80 @@ p {
     height: 15%;
 }
 
+.name {
+    color: #FFBB5C;
+    font-size: 60px;
+}
+
+p {
+    font-size: 25px;
+    color: #FFF4F4;
+}
+
+footer {
+    color: #FFBB5C;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.dp {
+    border-radius: 50%;
+  }
+
+#tum-courses {
+    display: none;
+    width: 100%;
+    padding: 5px 0;
+    text-align: left;
+    background-color: #FF9B50;
+    margin-top: 20px;
+    color: #FFF4F4;
+}
+
+.navpanel {
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h2 {
     color: #FFBB5C;
-    font-size: 2.5vw;
+    font-size: 35px;
 }
 
 h3 {
-    font-size: 2vw;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 1.75vw;
+    font-size: 25px;
+    color: #FFF4F4;
 }
+
+.subheading-education {
+    color: #FFF4F4;
+}
+
+.subheading-education2 {
+    color: #FFF4F4;
+}
+
+.grade {
+    font-size: 20px;
+    color: #FFF4F4;
+}
+
 .sidebar {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
