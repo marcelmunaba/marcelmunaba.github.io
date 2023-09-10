@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Marcel Giovanni Munaba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,19 +11,17 @@
 </head>
 <body>
     <header>
-        <aside>
-            <ul class="sidebar" id="sidebar-id">
-            <li><a class="active" href="#home">&#8593;</a></li>
-            </ul>  
+        <aside class="sidebar" id="sidebar-id">
+            <a href="#home"><i class="arrow"></i></a>
         </aside>
     </header>
     <section class="title-section" id="home">
         <img class="dp" src="assets/IMG-4212.jpg" alt="Display Photo" width="150px" height="150px"> 
-        <div>
-            <h1 class="name">Marcel Giovanni Munaba</h1>
-            <h4 class="subheading">Student at the Technical University of Munich, Germany</h4>  
-        </div>   
-          <p>I'm an enthusiastic undergraduate Computer Science 
+        <div class="name">
+            <h1>Marcel Giovanni Munaba</h1>
+            <h4>Student at the Technical University of Munich, Germany</h4> 
+        </div>  
+          <p class="short-bio">I'm an enthusiastic undergraduate Computer Science 
             student at the Technical University of Munich. 
             <!--With a particular interest in AI,-->As an avid learner, I thrive in collaborative environments that offer me the opportunity to learn something new each day.</p>
             <nav class="navpanel">
@@ -31,17 +30,16 @@
                 <a href="#Experience">Experience</a>
                 <a href="#Skills and Tools">Skills and Tools</a>
                 <a href="#Projects">Projects</a>
-                <a href="#Links">Links</a>
-                <a href="#Contact">Contact</a>
+                <a href="#Contact">Links &amp; Contact</a>
             </nav>
         </section>
     <section id="Education">
-        <h2>Education</h2>
+        <h2 class="section-title">Education</h2>
         <div class="">
             <h3 class="subheading-education">Technical University of Munich</h3>
-            <div class="subheading-education2">Bachelor of Science<br>Computer Science (Currently on the 3rd Semester)</div>
+            <div class="subheading-education2">B.Sc. Computer Science (Currently on the 3<sup>rd</sup> Semester)<br>October 2022 - now</div>
             <p class="grade">Grade: 2.95 - Last update : September 2023</p>
-            <button onclick="courses()">Show Courses Taken</button>
+            <button class="course-button" onclick="courses()">Show Courses Taken</button>
             <div id="tum-courses">
                 <ul>
                     <h4>1. Semester</h4>
@@ -84,33 +82,31 @@
         <div class="">
             <h3 class="subheading-education">Hochschule Kaiserslautern</h3>
             <div class="subheading-education2">Internationales Studienkolleg, T-Kurs</div>
+            <div>The International Preparatory College offers international students preparation for universities in Germany.</div>
             <p class="grade">Grade: 1.53</p>
         </div>
         <div class="">
             <h3 class="subheading-education">SMAK 1 Penabur Jakarta</h3>
             <div class="subheading-education2">Life Sciences Program</div>
-            <p class="grade">Grade: 91.64</p>
+            <div>Grade: 91.64</div>
+            <div>Activities and societies: SMAK One Cup Committee</div>
         </div>
     </section>
     <section id="Experience">
-        <h2>Experience</h2>
+        <h2 class="section-title">Experience</h2>
         <p>As of now I'm still collecting experiences. Be sure to look forward to it in the future!</p>
     </section>
     <section id="Skills-and-Tools">
-        <h2>Skills &amp; Tools</h2>
+        <h2 class="section-title">Skills &amp; Tools</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor dignissim convallis aenean et tortor at risus viverra adipiscing. Malesuada bibendum arcu vitae elementum. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Leo duis ut diam quam nulla porttitor. Tellus pellentesque eu tincidunt tortor aliquam nulla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Vel risus commodo viverra maecenas accumsan. Bibendum at varius vel pharetra vel turpis nunc. Placerat vestibulum lectus mauris ultrices eros in. Quis hendrerit dolor magna eget est.</p>
     </section>
     <section id="Projects">
-        <h2>Projects</h2>
+        <h2 class="section-title">Projects</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor dignissim convallis aenean et tortor at risus viverra adipiscing. Malesuada bibendum arcu vitae elementum. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Leo duis ut diam quam nulla porttitor. Tellus pellentesque eu tincidunt tortor aliquam nulla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Vel risus commodo viverra maecenas accumsan. Bibendum at varius vel pharetra vel turpis nunc. Placerat vestibulum lectus mauris ultrices eros in. Quis hendrerit dolor magna eget est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor dignissim convallis aenean et tortor at risus viverra adipiscing. Malesuada bibendum arcu vitae elementum. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Leo duis ut diam quam nulla porttitor. Tellus pellentesque eu tincidunt tortor aliquam nulla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Vel risus commodo viverra maecenas accumsan. Bibendum at varius vel pharetra vel turpis nunc. Placerat vestibulum lectus mauris ultrices eros in. Quis hendrerit dolor magna eget est.</p>
-    </section>
-    <section id="Links">
-        <h2>Links</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor dignissim convallis aenean et tortor at risus viverra adipiscing. Malesuada bibendum arcu vitae elementum. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Leo duis ut diam quam nulla porttitor. Tellus pellentesque eu tincidunt tortor aliquam nulla. Pharetra vel turpis nunc eget lorem dolor sed viverra. Vel risus commodo viverra maecenas accumsan. Bibendum at varius vel pharetra vel turpis nunc. Placerat vestibulum lectus mauris ultrices eros in. Quis hendrerit dolor magna eget est.</p>
     </section>
     <section id="Contact">
-        <h2>Contact</h2>
+        <h2 class="section-title">Links &amp; Contact</h2>
         <div class="contact-text">
             Email :
             <a href="mailto:marcelmunaba@gmail.com">marcelmunaba@gmail.com</a> (Personal) or <a href="mailto:marcelmunaba@tum.de">marcelmunaba@tum.de </a>(University Mail)
