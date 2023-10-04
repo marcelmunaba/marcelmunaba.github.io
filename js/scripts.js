@@ -6,3 +6,10 @@ function courses() {
     x.style.display = "block";
   }
 }
+
+// function email() {
+//   var x = document.getElementByClass("email-icon");
+//   if (x.matches(':hover')) {
+
+//   }
+// }

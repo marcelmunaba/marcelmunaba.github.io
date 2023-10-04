@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/8a197bf16f.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,7 +26,7 @@
         </div>  
           <p class="short-bio">Enthusiastic undergraduate Computer Science 
             student at the Technical University of Munich. 
-            As an avid learner, I thrive in collaborative environments that offer me the opportunity to learn something new each day. Also a game development enthusiast.</p>
+            As an avid learner, I thrive in collaborative environments that offer me the opportunity to learn something new each day.</p>
             <nav class="navpanel">
                 <a class="active" href="#home">Home</a>
                 <a href="#Education">Education</a>
@@ -84,6 +86,15 @@
                     <li>
                         IT-Sicherheit - <span class="bold"></span>
                     </li>
+                    <li>
+                        Grundlagen: Betriebssystem und Software - <span class="bold"></span>
+                    </li>
+                    <li>
+                        Analysis für Informatik - <span class="bold"></span>
+                    </li>
+                    <li>
+                        Numerisches Programmieren - <span class="bold"></span>
+                    </li>
                 </ul>   
             </div>
         <div class="">
@@ -105,25 +116,43 @@
     </section>
     <section id="Skills-and-Tools">
         <h2 class="section-title">Skills &amp; Tools</h2>
-        <p>HTML, CSS, JavaScript, jQuery, Java, C, Python, ... (Logonya aja kalo bisa)</p>
+        <i class="fab fa-java" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
+        <i class="fab fa-git-square" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
+        <span class="icon" style="background: center / contain no-repeat url('assets/c_white.png')"></span>
+        <span class="icon" style="background: center / contain no-repeat url('assets/ocaml_icon_white.png')"></span>
+        <span class="icon" style="background: center / contain no-repeat url('assets/godot_icon_white.png')"></span>
+        <i class="fab fa-html5" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
+        <i class="fab fa-css3-alt" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
+        <i class="fab fa-js-square" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
+        <i class="fab fa-python" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
     </section>
     <section id="Projects">
         <h2 class="section-title">Projects</h2>
         <h4>Slash Survivors</h4>
-        <h4>Pengu Tic Tac Toe</h4>
-        <p><a href="https://github.com/marcelmunaba/PenguTicTacToe">Github Link</a></p>
-        <h4>Crossy Road</h4>
-        <p><a href="https://github.com/marcelmunaba/CrossyRoad-Alpha">Github Link</a></p>
+        <div>
+            <img class="screenshot" src="assets/slash_survivors_screenshots/main_menu.png" alt="game_screenshots">
+            <img class="screenshot" src="assets/slash_survivors_screenshots/mode_select.png" alt="game_screenshots">
+            <img class="screenshot" src="assets/slash_survivors_screenshots/gameplay.png" alt="game_screenshots">
+            <img class="screenshot" src="assets/slash_survivors_screenshots/gameplay_2.png" alt="game_screenshots">
+        </div>
+        <iframe frameborder="0" src="https://itch.io/embed/2296356?bg_color=743f39&amp;fg_color=ffffff&amp;link_color=e53b44&amp;border_color=b86f50" width="552" height="167"><a href="https://marcelmunaba.itch.io/slash-survivors">Slash Survivors by marcelmunaba</a></iframe>
+        <p>Slash Survivors is a top-down 2D pixel hack and slash game. Fight your way through endless waves of enemies and collect as much points as possible or work your way through the objectives in normal mode (currently still in development)!</p>
+        <p>Written in GDScript and made using the Godot engine.</p>
+        <h4>Pengu Tic Tac Toe <a href="https://github.com/marcelmunaba/PenguTicTacToe"><i class="fa-brands fa-github" style='margin-left: 15px;font-size:48px;opacity:70%;color:white'></i></a></h4>
+        <p>A simple TicTacToe game (with a slight twist) in Java. Submission to my university course "PGdP" for week 9.</p>
+        <h4>Crossy Road <a href="https://github.com/marcelmunaba/CrossyRoad-Alpha"><i class="fa-brands fa-github" style='margin-left: 15px;font-size:48px;opacity:70%;color:white'></i></a></h4>
+        <p>A simple Crossy Road game using Pygame! Many thanks to the UDEMY Course teaching game development using Pygame.</p>
+
     </section>
     <section id="Contact">
         <h2 class="section-title">Links &amp; Contact</h2>
         <!--add github, linkedin, instagram using logos-->
-        <div class="contact-text">
-            Email :
-            <a href="mailto:marcelmunaba@gmail.com">marcelmunaba@gmail.com</a> (Personal) or <a href="mailto:marcelmunaba@tum.de">marcelmunaba@tum.de </a>(University Mail)
-        </div>
+        <a href="https://github.com/marcelmunaba/"><i class="fa-brands fa-github" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
+        <a href="https://www.linkedin.com/in/marcelmunaba"><i class="fab fa-linkedin" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
+        <a class="email-icon" href="mailto:marcelmunaba@gmail.com"><i class="fas fa-envelope-square" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
+        <a class="email-icon" href="mailto:marcelmunaba@tum.de"><iconify-icon icon="mdi:microsoft-outlook" style='width:42;height:48;font-size:48px;opacity:70%;color:white'></iconify-icon></a>
         <br>
     </section>
-    <footer>&copy; 2023 Marcel Giovanni Munaba</footer>
+    <footer>&copy; 2023 Marcel Giovanni Munaba. Made using HTML, CSS and Javascript</footer>
 </body>
 </html>
