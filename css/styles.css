@@ -200,14 +200,9 @@ aside ul li {
     color: rgb(8, 63, 141);
 }
 
-.screenshot {
-    width: 480px;
-    height: 240px;
-}
-
 #skills {
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: 3px;
     margin-bottom: 3px;
 }
@@ -218,7 +213,7 @@ aside ul li {
     display:inline-block;
     margin-top: 3px;
     margin-bottom:-5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     opacity:70%;
 }
