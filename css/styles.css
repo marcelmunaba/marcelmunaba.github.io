@@ -1,3 +1,5 @@
+/*HTML ELEMENTS*/
+
 body {
     background-color: #C63D2F;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -13,6 +15,9 @@ section {
     margin: 5px;
 }
 
+/*Buttons*/
+
+/*Sections - Title*/
 .title-section .dp {
     background-color: #E25E3E;
     display: block;
@@ -64,7 +69,23 @@ footer {
 .course-button {
     width: 20%;
     height: 25%;
+    font-family: inherit;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+    cursor:pointer;
+    text-decoration: none;
+    background-color: #F3E5AB;
+    color: black;
 }
+
+.course-button:hover {
+    text-decoration: none;
+    font-family: inherit;
+    background-color: #A33121;
+    color: white;
+}
+
 #tum-courses {
     display: none;
     width: 100%;
@@ -78,12 +99,13 @@ footer {
 .navpanel {     /*nav panel container*/
     overflow: hidden;
     background-color: #C63D2F;
+    text-align: center;
 }
 
 .navpanel a{
     text-decoration: none;
     float: left;  
-    display: block;
+    display:inline-block;
     text-align: center;
     padding: 14px 16px;
     font-size: 25px;
@@ -222,4 +244,16 @@ aside ul li {
     list-style-type:disc;
     color: #d3cec5;
     font-size: 30px;
+}
+
+#Projects h4 {
+    font-size: 25px;
+    color: #F3E5AB;
+}
+
+#Experience h3 {
+    color: #F3E5AB;
+}
+#Experience p {
+    font-size: 20px;
 }
