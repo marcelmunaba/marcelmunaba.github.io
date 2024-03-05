@@ -217,3 +217,9 @@ aside ul li {
     margin-right: 10px;
     opacity:70%;
 }
+
+#Projects {
+    list-style-type:disc;
+    color: #d3cec5;
+    font-size: 30px;
+}
