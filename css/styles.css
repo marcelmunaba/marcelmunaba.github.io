@@ -22,9 +22,10 @@ section {
         margin: 0 auto; /* Center the images */
     }
     iframe {
-        width:552px;
-        height:167px;
-        display: block; /* Ensure iframe behaves as a block-level element */
+        scale: 70%;
+        width: 100%;
+        position:relative;
+        text-align: center;
     }
 }
 
