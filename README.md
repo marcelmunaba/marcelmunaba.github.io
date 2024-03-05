@@ -1,2 +1,2 @@
 # marcelmunaba.github.io
-Personal website - still under construction
+Personal website - still under construction, occasionally developed.
