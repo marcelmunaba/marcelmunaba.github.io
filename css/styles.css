@@ -6,6 +6,14 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+footer {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFBB5C;
+}
+
 section {
     background-color: #E25E3E;
     padding-left: 10px;
@@ -13,6 +21,26 @@ section {
     padding-bottom: 10px;
     padding-right: 10px;
     margin: 5px;
+}
+
+section p  {
+    font-size: 25px;
+    color: #FFF4F4;
+}
+
+section div {
+    color: #FFF4F4;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+    color: #FFF4F4;
 }
 
 @media only screen and (min-width: 305px) and (max-width: 720px){
@@ -37,9 +65,104 @@ section {
     }
 }
 
+
+aside ul li {
+    border: 1px solid #ddd; /* Add a thin border to each list item */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Add a grey background color */
+    padding: 12px; /* Add some padding */
+    opacity: 75%;
+    font-size: 40px;
+}
+
 /*Buttons*/
 
-/*Sections - Title*/
+.course-button {
+    width: 20%;
+    height: 25%;
+    font-family: inherit;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+    cursor:pointer;
+    text-decoration: none;
+    background-color: #F3E5AB;
+    color: black;
+}
+
+.course-button:hover {
+    text-decoration: none;
+    font-family: inherit;
+    background-color: #A33121;
+    color: white;
+}
+
+/*Navigation Panel*/
+.navpanel {     /*nav panel container*/
+    overflow: hidden;
+    background-color: #C63D2F;
+    text-align: center;
+}
+
+.navpanel a{
+    text-decoration: none;
+    float: left;  
+    display:inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 25px;
+    color: #FFF4F4;
+}
+
+.navpanel a:hover {
+    text-decoration: none;
+    background-color: #FFBB5C;
+    color: black;
+}
+
+/* .navpanel a:active {
+    text-decoration: none;
+} */
+
+/*ID classifiers*/
+#tum-courses {
+    display: none;
+    width: 100%;
+    padding: 5px 0;
+    text-align: left;
+    background-color: #ef8f45;
+    margin-top: 20px;
+    color: #FFF4F4;
+}
+
+#skills {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+#Projects {
+    list-style-type:disc;
+    color: #d3cec5;
+    font-size: 30px;
+}
+
+#Projects h4 {
+    font-size: 25px;
+    color: #F3E5AB;
+}
+
+#Experience h3 {
+    color: #F3E5AB;
+}
+#Experience p {
+    font-size: 20px;
+}
+
+/*others*/
+
 .title-section .dp {
     background-color: #E25E3E;
     display: block;
@@ -63,93 +186,14 @@ section {
     margin-bottom: 0.5%;
 }
 
-section div {
-    color: #FFF4F4;
-    font-size: 20px;
-    margin-top: 5px;
-}
-
 p[class~="grade"] {
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
-section p  {
-    font-size: 25px;
-    color: #FFF4F4;
-}
-
-footer {
-    color: #FFBB5C;
-}
-
 .bold {
     font-weight: bold;
-}
-
-.course-button {
-    width: 20%;
-    height: 25%;
-    font-family: inherit;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px #999;
-    cursor:pointer;
-    text-decoration: none;
-    background-color: #F3E5AB;
-    color: black;
-}
-
-.course-button:hover {
-    text-decoration: none;
-    font-family: inherit;
-    background-color: #A33121;
-    color: white;
-}
-
-#tum-courses {
-    display: none;
-    width: 100%;
-    padding: 5px 0;
-    text-align: left;
-    background-color: #ef8f45;
-    margin-top: 20px;
-    color: #FFF4F4;
-}
-
-.navpanel {     /*nav panel container*/
-    overflow: hidden;
-    background-color: #C63D2F;
-    text-align: center;
-}
-
-.navpanel a{
-    text-decoration: none;
-    float: left;  
-    display:inline-block;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 25px;
-    color: #FFF4F4;
-}
-
-
-.navpanel a:hover {
-    text-decoration: none;
-    background-color: #FFBB5C;
-    color: black;
-}
-
-/* .navpanel a:active {
-    text-decoration: none;
-} */
-
-footer {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .section-title {
@@ -167,16 +211,6 @@ footer {
     color: #FFBB5C;
     font-size: 35px;
 }
-
-h3 {
-    font-size: 30px;
-}
-
-h4 {
-    font-size: 25px;
-    color: #FFF4F4;
-}
-
 
 .short-bio {
     clear:  none;
@@ -221,15 +255,6 @@ h4 {
     right: 0;
 } 
 
-aside ul li {
-    border: 1px solid #ddd; /* Add a thin border to each list item */
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6; /* Add a grey background color */
-    padding: 12px; /* Add some padding */
-    opacity: 75%;
-    font-size: 40px;
-}
-
 .contact-text {
     color: #FFF4F4;
     font-size: 20px;
@@ -244,13 +269,6 @@ aside ul li {
     color: rgb(8, 63, 141);
 }
 
-#skills {
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-
 .icon {
     height: 48px;
     width: 48px;
@@ -260,22 +278,4 @@ aside ul li {
     margin-left: 10px;
     margin-right: 10px;
     opacity:70%;
-}
-
-#Projects {
-    list-style-type:disc;
-    color: #d3cec5;
-    font-size: 30px;
-}
-
-#Projects h4 {
-    font-size: 25px;
-    color: #F3E5AB;
-}
-
-#Experience h3 {
-    color: #F3E5AB;
-}
-#Experience p {
-    font-size: 20px;
 }
