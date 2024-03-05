@@ -15,14 +15,24 @@ section {
     margin: 5px;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 305px) and (max-width: 720px){
+    .screenshot {
+        width: 100%; /* Adjust as needed */
+        height: auto;
+        margin: 0 auto; /* Center the images */
+    }
+    iframe {
+        width:552px;
+        height:167px;
+        display: block; /* Ensure iframe behaves as a block-level element */
+    }
+}
+
+@media only screen and (min-width: 721px) {
     .screenshot {
         width: 45%; /* Adjust as needed */
         height: auto;
-    }
-    .itchio {
-        text-align: center;
-        width: 45%; /* Adjust as needed */
+        margin: 0 auto; /* Center the images */
     }
 }
 
