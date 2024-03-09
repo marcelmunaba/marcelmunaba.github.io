@@ -97,6 +97,30 @@ aside ul li {
     color: white;
 }
 
+.email-icon1:hover::after {
+    content: "Personal mail";
+    display: inline;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 0px;
+    z-index: 2;
+}
+
+.email-icon2:hover::after {
+    content: "University mail";
+    display: inline;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 0px;
+    z-index: 2;
+}
+
 /*Navigation Panel*/
 .navpanel {     /*nav panel container*/
     overflow: hidden;
@@ -278,4 +302,8 @@ p[class~="grade"] {
     margin-left: 10px;
     margin-right: 10px;
     opacity:70%;
+}
+
+.emailme {
+    color: #FFBB5C;
 }
