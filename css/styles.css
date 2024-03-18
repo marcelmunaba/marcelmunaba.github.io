@@ -2,7 +2,6 @@
 
 body {
     background-color: #222831;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Manrope', sans-serif;
 }
 
@@ -96,10 +95,6 @@ aside ul li {
     font-family: inherit;
     background-color: #FFE066;
     color: #222831;
-}
-
-#cv {
-    margin: 5px 5px 5px 5px;
 }
 
 #cv:hover::after {
