@@ -54,5 +54,4 @@ document.addEventListener('DOMContentLoaded', function() {
           currentSlide(i + 1);
       });
   }
-  
 });
