@@ -1,7 +1,7 @@
 /*HTML ELEMENTS*/
 
 body {
-    background-color: #C63D2F;
+    background-color: #222831;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: 'Manrope', sans-serif;
 }
@@ -11,11 +11,11 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    color: #FFBB5C;
+    color: #76ABAE;
 }
 
 section {
-    background-color: #E25E3E;
+    background-color: #31363F;
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -39,6 +39,7 @@ h3 {
 }
 
 h4 {
+    clear: both;
     font-size: 25px;
     color: #FFF4F4;
 }
@@ -86,15 +87,35 @@ aside ul li {
     box-shadow: 0 4px #999;
     cursor:pointer;
     text-decoration: none;
-    background-color: #F3E5AB;
-    color: black;
+    background-color: #D7B34D;
+    color: #31363F;
 }
 
 .course-button:hover {
     text-decoration: none;
     font-family: inherit;
-    background-color: #A33121;
-    color: white;
+    background-color: #FFE066;
+    color: #222831;
+}
+
+#cv {
+    margin: 5px 5px 5px 5px;
+}
+
+#cv:hover::after {
+    content: "Download CV";
+    display: inline;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 0px;
+    z-index: 4;
+    opacity: 1; /* Set opacity to 1 to make it fully opaque */
+    font-size: 12px; /* Adjust the font size as needed */
+    width: auto; /* Set the width to auto */
+    height: auto; /* Set the height to auto */
 }
 
 .email-icon1:hover::after {
@@ -124,7 +145,7 @@ aside ul li {
 /*Navigation Panel*/
 .navpanel {     /*nav panel container*/
     overflow: hidden;
-    background-color: #C63D2F;
+    background-color: #D7B34D;
     text-align: center;
 }
 
@@ -135,13 +156,13 @@ aside ul li {
     text-align: center;
     padding: 14px 16px;
     font-size: 25px;
-    color: #FFF4F4;
+    color: #31363F;
 }
 
 .navpanel a:hover {
     text-decoration: none;
-    background-color: #FFBB5C;
-    color: black;
+    background-color: #FFE066;
+    color: #222831;
 }
 
 /* .navpanel a:active {
@@ -154,7 +175,7 @@ aside ul li {
     width: 100%;
     padding: 5px 0;
     text-align: left;
-    background-color: #ef8f45;
+    background-color: #222831;
     margin-top: 20px;
     color: #FFF4F4;
 }
@@ -166,6 +187,11 @@ aside ul li {
     margin-bottom: 3px;
 }
 
+#Experience {
+    list-style-type:disc;
+    color: #d3cec5;
+    font-size: 30px;
+}
 
 #Projects {
     list-style-type:disc;
@@ -175,11 +201,11 @@ aside ul li {
 
 #Projects h4 {
     font-size: 25px;
-    color: #F3E5AB;
+    color: #FFE066;
 }
 
 #Experience h3 {
-    color: #F3E5AB;
+    color: #FFE066;
 }
 #Experience p {
     font-size: 20px;
@@ -187,25 +213,21 @@ aside ul li {
 
 /*others*/
 
-.title-section .dp {
-    background-color: #E25E3E;
-    display: block;
-    width: 150px;
-    height: 150px;
-}
-
 .dp {
     float: left;
     display: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image fills the container */
     border-radius: 50%;
-    padding-right: 15px;
     margin-right: 15px;
     margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .name > h1 {
-    color: #FFBB5C;
+    color: #FFC300;
     font-size: 60px;
     margin-bottom: 0.5%;
 }
@@ -232,7 +254,7 @@ p[class~="grade"] {
     margin-top: 0.3%;
     margin-bottom: 0.7%;
     width: 45%;
-    color: #FFBB5C;
+    color: #FFC300;
     font-size: 35px;
 }
 
@@ -268,9 +290,9 @@ p[class~="grade"] {
 }
 
 .sidebar {
-    background-color: white;
+    background-color: #EEEEEE;
     opacity: 75%;
-    border: thick solid white;
+    border: thick solid #EEEEEE;
     width: 10px;
     padding: 15px 15px 5px 15px;
     /* padding: 15px; */
@@ -306,4 +328,99 @@ p[class~="grade"] {
 
 .emailme {
     color: #FFBB5C;
+}
+
+/*Slideshow*/
+/*------------------------------------------------------------*/
+.mySlides {
+    display: none
+}
+.slideshow-container img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #EEEEEE;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #EEEEEE;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.slideshow-container .active, .dot:hover {
+  background-color: #D7B34D;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
