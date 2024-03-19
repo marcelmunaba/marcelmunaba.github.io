@@ -1,5 +1,111 @@
-/*HTML ELEMENTS*/
+/*Media Queries*/
+/*TODO: CHANGE FONT SESUAI MEDIAQUERY!*/
+@media only screen and (min-width: 305px) and (max-width: 720px){
+    .screenshot {
+        width: 100%; /* Adjust as needed */
+        height: auto;
+        margin: 0 auto; /* Center the images */
+    }
+    
+    iframe {
+        scale: 70%;
+        width: 100%;
+        position:relative;
+        text-align: center;
+    }
+}
 
+@media only screen and (min-width: 721px) {
+    .screenshot {
+        width: 45%; /* Adjust as needed */
+        height: auto;
+        margin: 0 auto; /* Center the images */
+    }
+    .screenshot-cb1 {
+        width: 50%; /* Adjust as needed */
+        height: 150px;
+        margin: 0 auto; /* Center the images */
+    }
+    .screenshot-cb2 {
+        width: 50%; /* Adjust as needed */
+        margin: 0 auto; /* Center the images */
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    section p {
+        font-size: 18px; /* Adjusted font size for paragraph */
+    }
+
+    section div {
+        font-size: 16px; /* Adjusted font size for div */
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 25px; /* Adjusted font size for h3 */
+    }
+
+    h4 {
+        font-size: 20px; /* Adjusted font size for h4 */
+    }
+
+    aside ul li {
+        font-size: 30px; /* Adjusted font size for list items */
+    }
+
+    .section-title {
+        font-size: 25px; /* Adjusted font size for section title */
+    }
+
+    .contact-text {
+        font-size: 16px; /* Adjusted font size for contact text */
+    }
+
+    .text, .numbertext {
+        font-size: 10px; /* Adjusted font size for slideshow captions */
+    }
+}
+
+/*Media Queries for Laptops*/
+@media only screen and (min-width: 601px) {
+    section p {
+        font-size: 25px; /* Original font size for paragraph */
+    }
+
+    section div {
+        font-size: 20px; /* Original font size for div */
+    }
+
+    h3 {
+        font-size: 30px; /* Original font size for h3 */
+    }
+
+    h4 {
+        font-size: 25px; /* Original font size for h4 */
+    }
+
+    aside ul li {
+        font-size: 40px; /* Original font size for list items */
+    }
+
+    .section-title {
+        font-size: 35px; /* Original font size for section title */
+    }
+
+    .contact-text {
+        font-size: 20px; /* Original font size for contact text */
+    }
+
+    .text, .numbertext {
+        font-size: 15px; /* Original font size for slideshow captions */
+    }
+}
+
+/*HTML ELEMENTS*/
 body {
     background-color: #222831;
     font-family: 'Manrope', sans-serif;
@@ -10,7 +116,7 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    color: #76ABAE;
+    color: #D7B34D;
 }
 
 section {
@@ -42,29 +148,6 @@ h4 {
     font-size: 25px;
     color: #FFF4F4;
 }
-
-@media only screen and (min-width: 305px) and (max-width: 720px){
-    .screenshot {
-        width: 100%; /* Adjust as needed */
-        height: auto;
-        margin: 0 auto; /* Center the images */
-    }
-    iframe {
-        scale: 70%;
-        width: 100%;
-        position:relative;
-        text-align: center;
-    }
-}
-
-@media only screen and (min-width: 721px) {
-    .screenshot {
-        width: 45%; /* Adjust as needed */
-        height: auto;
-        margin: 0 auto; /* Center the images */
-    }
-}
-
 
 aside ul li {
     border: 1px solid #ddd; /* Add a thin border to each list item */
@@ -325,6 +408,10 @@ p[class~="grade"] {
     color: #FFBB5C;
 }
 
+.demo {
+    color: #FFBB5C
+}
+
 /*Slideshow*/
 /*------------------------------------------------------------*/
 .mySlides {
@@ -417,5 +504,20 @@ p[class~="grade"] {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev, .next,.text {font-size: 10px}
+
+  /* Slideshow container */
+.slideshow-container {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+  }
+}
+
+.cb-div {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
