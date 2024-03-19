@@ -33,7 +33,7 @@
     }
     .screenshot-cb1 {
         width: 50%; /* Adjust as needed */
-        height: 150px;
+        height: 80px;
         margin: 0 auto; /* Center the images */
     }
     .screenshot-cb2 {
@@ -42,83 +42,14 @@
     }
 }
 
-@media only screen and (max-width: 300px) {
-    section p {
-        font-size: 18px; /* Adjusted font size for paragraph */
-    }
-
-    section div {
-        font-size: 16px; /* Adjusted font size for div */
-    }
-
-    h1 {
-        font-size: 16px;
-    }
-
-    h3 {
-        font-size: 25px; /* Adjusted font size for h3 */
-    }
-
-    h4 {
-        font-size: 20px; /* Adjusted font size for h4 */
-    }
-
-    aside ul li {
-        font-size: 30px; /* Adjusted font size for list items */
-    }
-
-    .section-title {
-        font-size: 25px; /* Adjusted font size for section title */
-    }
-
-    .contact-text {
-        font-size: 16px; /* Adjusted font size for contact text */
-    }
-
-    .text, .numbertext {
-        font-size: 10px; /* Adjusted font size for slideshow captions */
-    }
-}
-
-/*Media Queries for Laptops*/
-@media only screen and (min-width: 601px) {
-    section p {
-        font-size: 25px; /* Original font size for paragraph */
-    }
-
-    section div {
-        font-size: 20px; /* Original font size for div */
-    }
-
-    h3 {
-        font-size: 30px; /* Original font size for h3 */
-    }
-
-    h4 {
-        font-size: 25px; /* Original font size for h4 */
-    }
-
-    aside ul li {
-        font-size: 40px; /* Original font size for list items */
-    }
-
-    .section-title {
-        font-size: 35px; /* Original font size for section title */
-    }
-
-    .contact-text {
-        font-size: 20px; /* Original font size for contact text */
-    }
-
-    .text, .numbertext {
-        font-size: 15px; /* Original font size for slideshow captions */
-    }
-}
-
 /*HTML ELEMENTS*/
 body {
     background-color: #222831;
     font-family: 'Manrope', sans-serif;
+}
+
+ul {
+    padding-left: 20px;
 }
 
 footer {
@@ -139,23 +70,23 @@ section {
 }
 
 section p  {
-    font-size: 25px;
+    font-size: 1.25rem;
     color: #FFF4F4;
 }
 
 section div {
     color: #FFF4F4;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-top: 5px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 h4 {
     clear: both;
-    font-size: 25px;
+    font-size: 1.75rem;
     color: #FFF4F4;
 }
 
@@ -165,7 +96,7 @@ aside ul li {
     background-color: #f6f6f6; /* Add a grey background color */
     padding: 12px; /* Add some padding */
     opacity: 75%;
-    font-size: 40px;
+    font-size: 1.75rem;
 }
 
 /*Buttons*/
@@ -238,12 +169,11 @@ aside ul li {
 }
 
 .navpanel a{
-    text-decoration: none;
-    float: left;  
+    text-decoration: none; 
     display:inline-block;
     text-align: center;
     padding: 14px 16px;
-    font-size: 25px;
+    font-size: 1.5rem;
     color: #31363F;
 }
 
@@ -258,6 +188,12 @@ aside ul li {
 } */
 
 /*ID classifiers*/
+#home {
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
 #tum-courses {
     display: none;
     width: 100%;
@@ -278,17 +214,16 @@ aside ul li {
 #Experience {
     list-style-type:disc;
     color: #d3cec5;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 #Projects {
     list-style-type:disc;
     color: #d3cec5;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 #Projects h4 {
-    font-size: 25px;
     color: #FFE066;
 }
 
@@ -296,32 +231,101 @@ aside ul li {
     color: #FFE066;
 }
 #Experience p {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /*others*/
 
-.dp {
-    float: left;
-    display: auto;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* Ensures the image fills the container */
-    border-radius: 50%;
-    margin-right: 15px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+div.dp2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 700px;
+    width: 100%;
 }
 
+.dp2 img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    z-index: 1;
+}
+
+.name {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    max-height: 60%;
+    background-color: rgba(34, 40, 49, 0.75);
+    z-index: 2;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
 .name > h1 {
     color: #FFC300;
-    font-size: 60px;
-    margin-bottom: 0.5%;
+    clear: both;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.name h4 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.blur-background {
+    background-image: url('../assets/picture_vertical.jpg');
+    background-size: cover; /* Ensure the background image covers the entire element */
+    background-position: center; /* Center the background image */
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure the blurred background is behind the image */
+    filter: blur(20px); /* Adjust the blur intensity as needed */
+    position: absolute;
+    bottom: 0;
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 600px) {
+    .dp2 img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+
+    .name {
+        height: auto; /* Allow height to adjust based on content */
+        max-height: 60%; /* Limit maximum height to 30% of the container */
+        overflow: hidden; /* Hide overflowing content */
+    }
+    .name > h1 {
+        color: #FFC300;
+        clear: both;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .name h4 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 p[class~="grade"] {
-    font-size: 20px;
+    font-weight: 600;
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -341,9 +345,9 @@ p[class~="grade"] {
     padding-right:40px;
     margin-top: 0.3%;
     margin-bottom: 0.7%;
-    width: 45%;
+    width: 85%;
     color: #FFC300;
-    font-size: 35px;
+    font-size: 3rem;
 }
 
 .short-bio {
@@ -351,6 +355,7 @@ p[class~="grade"] {
     /* border-top: 5px;
     border-top-width: thick;
     border-top-style: solid; */
+    margin-top: 0%;
     border-top: thick solid #FFF4F4;
     padding-top: 10px;
     margin-bottom: 15px;
@@ -378,30 +383,17 @@ p[class~="grade"] {
 }
 
 .sidebar {
-    background-color: #EEEEEE;
+    background-color: #FFC300;
     opacity: 75%;
-    border: thick solid #EEEEEE;
+    border: thick solid #FFC300;
     width: 10px;
     padding: 15px 15px 5px 15px;
     /* padding: 15px; */
     margin-top: 25px;
     position: fixed;
     right: 0;
+    z-index: 5;
 } 
-
-.contact-text {
-    color: #FFF4F4;
-    font-size: 20px;
-}
-
-.contact-text a{
-    text-decoration: none;
-    color: #d3cec5;
-}
-
-.contact-text a:hover {
-    color: rgb(8, 63, 141);
-}
 
 .icon {
     height: 48px;
@@ -422,10 +414,30 @@ p[class~="grade"] {
     color: #FFBB5C
 }
 
+.cb-div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.cb-embed {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cb-embed > iframe {
+    width: 500px;
+    height: 300px;
+}
+
+
 /*Slideshow*/
 /*------------------------------------------------------------*/
 .mySlides {
-    display: none
+    display: none;
+    position: relative;
 }
 .slideshow-container img {
     vertical-align: middle;
@@ -436,19 +448,36 @@ p[class~="grade"] {
   max-width: 75%;
   position: relative;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    max-width: 95%;
+    padding: 16px;
+    margin-top: -22px;
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
+  max-width: 95%;
   padding: 16px;
   margin-top: -22px;
   color: #EEEEEE;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -468,18 +497,22 @@ p[class~="grade"] {
 /* Caption text */
 .text {
   color: #EEEEEE;
-  font-size: 15px;
+  background-color: rgba(34, 40, 49, 0.75);;
+  font-size: 1rem;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
+  left: 30%;
+  bottom: 0px;
+  width: 40%;
   text-align: center;
 }
 
 /* Number text (1/4 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 1rem;
+  background-color: black;
+  opacity: 0.4;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -488,8 +521,8 @@ p[class~="grade"] {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 0.5rem;
+  width: 0.5rem;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -513,21 +546,15 @@ p[class~="grade"] {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 10px}
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+    .prev, .next,.text {font-size: 0.75rem}
 
   /* Slideshow container */
-.slideshow-container {
-    max-width: 80%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-  }
-}
-
-.cb-div {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
+    .slideshow-container {
+        max-width: 95%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: auto;
+    }
 }
