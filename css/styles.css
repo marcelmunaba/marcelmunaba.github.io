@@ -421,18 +421,6 @@ p[class~="grade"] {
     gap: 5px;
 }
 
-.cb-embed {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.cb-embed > iframe {
-    width: 500px;
-    height: 300px;
-}
-
-
 /*Slideshow*/
 /*------------------------------------------------------------*/
 .mySlides {
