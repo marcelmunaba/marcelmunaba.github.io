@@ -7,6 +7,16 @@
         margin: 0 auto; /* Center the images */
     }
     
+    .screenshot-cb1 {
+        width: 100%; /* Adjust as needed */
+        height: auto;
+        margin: 0 auto; /* Center the images */
+    }
+    .screenshot-cb2 {
+        width: 100%; /* Adjust as needed */
+        margin: 0 auto; /* Center the images */
+    }
+
     iframe {
         scale: 70%;
         width: 100%;
