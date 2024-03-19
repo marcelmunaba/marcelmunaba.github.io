@@ -355,6 +355,7 @@ p[class~="grade"] {
     /* border-top: 5px;
     border-top-width: thick;
     border-top-style: solid; */
+    text-align: center;
     margin-top: 0%;
     border-top: thick solid #FFF4F4;
     padding-top: 10px;
