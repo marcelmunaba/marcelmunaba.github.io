@@ -101,16 +101,9 @@ aside ul li {
 
 /*Buttons*/
 
-.course-button {
-    width: 40%;
-    height: 25%;
+#course-button {
     font-family: inherit;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px #999;
-    cursor:pointer;
-    text-decoration: none;
-    background-color: #D7B34D;
+    background-color: #D7B34D !important;
     color: #31363F;
 }
 
@@ -197,7 +190,6 @@ aside ul li {
 }
 
 #tum-courses {
-    display: none;
     width: 100%;
     padding: 5px 0;
     text-align: left;
@@ -454,130 +446,4 @@ p[class~="grade"] {
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
-}
-
-/*Slideshow*/
-/*------------------------------------------------------------*/
-.mySlides {
-    display: none;
-    position: relative;
-}
-.slideshow-container img {
-    vertical-align: middle;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 75%;
-  position: relative;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
-/* Next & previous buttons */
-.prev {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    max-width: 95%;
-    padding: 16px;
-    margin-top: -22px;
-    color: #EEEEEE;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  max-width: 95%;
-  padding: 16px;
-  margin-top: -22px;
-  color: #EEEEEE;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #EEEEEE;
-  background-color: rgba(34, 40, 49, 0.75);;
-  font-size: 1rem;
-  padding: 8px 12px;
-  position: absolute;
-  left: 30%;
-  bottom: 0px;
-  width: 40%;
-  text-align: center;
-}
-
-/* Number text (1/4 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 1rem;
-  background-color: black;
-  opacity: 0.4;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 0.5rem;
-  width: 0.5rem;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.slideshow-container .active, .dot:hover {
-  background-color: #D7B34D;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (min-width: 300px) and (max-width: 900px) {
-    .prev, .next,.text {font-size: 0.75rem}
-
-  /* Slideshow container */
-    .slideshow-container {
-        max-width: 95%;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        margin: auto;
-    }
 }

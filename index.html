@@ -55,81 +55,108 @@
             <h3 class="subheading-education">Technical University of Munich</h3>
             <div class="subheading-education2">B.Sc. Computer Science (Currently on the 4<sup>th</sup> Semester)<br>October 2022 - now</div>
             <p class="grade">Grade: 2.82 - Last update : March 2024</p>
-            
-            <button class="course-button" onclick="courses()">Show Courses Taken</button>
-            <div id="tum-courses">
-                <ul>
-                    <h4>1. Semester</h4>
-                    <li>
-                        Einführung in die Informatik (Introduction to Computer Science) - <span class="bold">IN0001</span>
-                    </li>
-                    <li>
-                        Einführung in die Rechnerarchitektur (Introduction to Computer Organization and Technology - Computer
-                        Architecture) - <span class="bold">IN0004</span>
-                    </li>
-                    <li>
-                        Diskrete Strukturen (Discrete Structures) - <span class="bold">IN0015</span>
-                    </li>
-                    <li>
-                        Praktikum : Grundlagen der Programmierung (Fundamentals of Programming [Exercises & Laboratory]) - <span class="bold">IN0002</span>
-                    </li>
-                    <h4>2. Semester</h4>
-                    <li>
-                        Grundlagen : Algorithmen und Datenstrukturen (Fundamentals of Algorithms and Data Structures) - <span class="bold">IN0007</span>
-                    </li>
-                    <li>
-                        Einführung in die Softwaretechnik (Introduction to Software Engineering) - <span class="bold">IN0006</span>
-                    </li>
-                    <li>
-                        Lineare Algebra für Informatik (Linear Algebra for Informatics) - <span class="bold">MA0901</span>
-                    </li>
-                    <li>
-                        Funktionale Programmierung und Verifikation (Functional Programming and Verification) - <span class="bold">IN0003</span>
-                    </li>
-                    <li>
-                        Grundlagenpraktikum : Rechnerarchitektur (Fundamentals of Computer Architecture [Exercises & Laboratory]) - <span class="bold">IN0005</span>
-                    </li>
-                    <li>
-                        Französisch A1.1 (French A1.1) - <span class="bold">SZ0501</span>
-                    </li>
-                    <h4>3. Semester</h4>
-                    <li>
-                        Grundlagen: Datenbanken (Introduction to Databases) - <span class="bold">IN0008</span>
-                    </li>
-                    <li>
-                        IT-Sicherheit (IT Security) - <span class="bold">IN0042</span>
-                    </li>
-                    <li>
-                        Grundlagen: Betriebssysteme und Systemsoftware (Introduction to Operating Systems and System Software) - <span class="bold">IN0009</span>
-                    </li>
-                    <li>
-                        Analysis für Informatik (Calculus for Computer Science) - <span class="bold">MA0902</span>
-                    </li>
-                    <li>
-                        Numerisches Programmieren (Numerical Programming) - <span class="bold">IN0019</span>
-                    </li>
-                    <li>
-                        Koreanisch A1.1 (Korean A1.1) - <span class="bold">SZ1808</span>
-                    </li>
-                    <h4>4. Semester (current)</h4>
-                    <li>
-                        Einführung in die Theoretische Informatik (Introduction to Theoretical Computer Science) - <span class="bold">IN0011</span>
-                    </li>
-                    <li>
-                        Grundlagen: Rechnernetze und Verteilte Systeme (Introduction to Computer Networks and Distributed Systems) - <span class="bold">IN0010</span>
-                    </li>
-                    <li>
-                        Diskrete Wahrscheinlichkeitstheorie (Discrete Probability Theory) - <span class="bold">IN0018</span>
-                    </li>
-                    <li>
-                        Modellbildung und Simulation (Fokus Analysis) (Modeling and Simulation [Focus on Calculus]) - <span class="bold">IN2366</span>
-                    </li>
-                    <li>
-                        Autonomes Fahren (Autonomous Driving) - <span class="bold">IN2356</span>
-                    </li>
-                    <li>
-                        Seminar - Neurotechnology and Human-Robot Interfacing - <span class="bold">IN0014</span>
-                    </li>
+            <button class="btn btn-secondary btn-lg btn-block" id="course-button" type="button" data-bs-toggle="collapse" data-bs-target="#tum-courses" aria-expanded="true" aria-controls="tum-courses">
+                Show courses taken
+            </button>
+            <div class="collapse" id="tum-courses">
+                <ul style="margin: 15px 10px;">
+                    <h4>1. Semester <button class="btn btn-secondary btn-sm btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    show/hide
+                </button></h4>
+                    
+                    <div class="collapse" id="collapse1">
+                        <ul>
+                            <li>
+                                Einführung in die Informatik (Introduction to Computer Science) - <span class="bold">IN0001</span>
+                            </li>
+                            <li>
+                                Einführung in die Rechnerarchitektur (Introduction to Computer Organization and Technology - Computer
+                                Architecture) - <span class="bold">IN0004</span>
+                            </li>
+                            <li>
+                                Diskrete Strukturen (Discrete Structures) - <span class="bold">IN0015</span>
+                            </li>
+                            <li>
+                                Praktikum : Grundlagen der Programmierung (Fundamentals of Programming [Exercises & Laboratory]) - <span class="bold">IN0002</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <h4>2. Semester <button class="btn btn-secondary btn-sm btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        show/hide
+                    </button></h4>
+                    <div class="collapse" id="collapse2">
+                        <ul>
+                            <li>
+                                Grundlagen : Algorithmen und Datenstrukturen (Fundamentals of Algorithms and Data Structures) - <span class="bold">IN0007</span>
+                            </li>
+                            <li>
+                                Einführung in die Softwaretechnik (Introduction to Software Engineering) - <span class="bold">IN0006</span>
+                            </li>
+                            <li>
+                                Lineare Algebra für Informatik (Linear Algebra for Informatics) - <span class="bold">MA0901</span>
+                            </li>
+                            <li>
+                                Funktionale Programmierung und Verifikation (Functional Programming and Verification) - <span class="bold">IN0003</span>
+                            </li>
+                            <li>
+                                Grundlagenpraktikum : Rechnerarchitektur (Fundamentals of Computer Architecture [Exercises & Laboratory]) - <span class="bold">IN0005</span>
+                            </li>
+                            <li>
+                                Französisch A1.1 (French A1.1) - <span class="bold">SZ0501</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <h4>3. Semester <button class="btn btn-secondary btn-sm btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        show/hide
+                    </button></h4>
+                    <div class="collapse" id="collapse3">
+                        <ul>
+                            <li>
+                                Grundlagen: Datenbanken (Introduction to Databases) - <span class="bold">IN0008</span>
+                            </li>
+                            <li>
+                                IT-Sicherheit (IT Security) - <span class="bold">IN0042</span>
+                            </li>
+                            <li>
+                                Grundlagen: Betriebssysteme und Systemsoftware (Introduction to Operating Systems and System Software) - <span class="bold">IN0009</span>
+                            </li>
+                            <li>
+                                Analysis für Informatik (Calculus for Computer Science) - <span class="bold">MA0902</span>
+                            </li>
+                            <li>
+                                Numerisches Programmieren (Numerical Programming) - <span class="bold">IN0019</span>
+                            </li>
+                            <li>
+                                Koreanisch A1.1 (Korean A1.1) - <span class="bold">SZ1808</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <h4>4. Semester (current) <button class="btn btn-secondary btn-sm btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        show/hide
+                    </button></h4>
+                    <div class="collapse show" id="collapse4">
+                        <ul>
+                            <li>
+                                Einführung in die Theoretische Informatik (Introduction to Theoretical Computer Science) - <span class="bold">IN0011</span>
+                            </li>
+                            <li>
+                                Grundlagen: Rechnernetze und Verteilte Systeme (Introduction to Computer Networks and Distributed Systems) - <span class="bold">IN0010</span>
+                            </li>
+                            <li>
+                                Diskrete Wahrscheinlichkeitstheorie (Discrete Probability Theory) - <span class="bold">IN0018</span>
+                            </li>
+                            <li>
+                                Modellbildung und Simulation (Fokus Analysis) (Modeling and Simulation [Focus on Calculus]) - <span class="bold">IN2366</span>
+                            </li>
+                            <li>
+                                Autonomes Fahren (Autonomous Driving) - <span class="bold">IN2356</span>
+                            </li>
+                            <li>
+                                Seminar - Neurotechnology and Human-Robot Interfacing - <span class="bold">IN0014</span>
+                            </li>
+                        </ul>
+                    </div> 
                 </ul>   
             </div>
         <div class="">
@@ -193,8 +220,8 @@
                     <div class="card-body">
                         <h5 class="card-title">CensorBot</h5>
                         <p class="card-text">CensorBot is a simple profanity checker made using machine Learning that utilizes the Naive Bayes classifier from sklearn library.</p>
-                        <p class="card-text">Has it ever occured to you, that you typed something in the chat while playing online video games, and it gets censored? Try it out <a class="demo" href="https://marcelmunaba.pyscriptapps.com/censorbot-demo/latest/">here!</a></p>
-                        <p class="card-text">Datasets are made personally by me and enlarged with help of ChatGPT.</p>
+                        <p class="card-text">Ever wondered how when you are playing online video games and typed something in the chat and it gets censored? Try it out <a class="demo" href="https://marcelmunaba.pyscriptapps.com/censorbot-demo/latest/">here!</a></p>
+                        <p class="card-text">Datasets are made personally and enlarged with help of ChatGPT.</p>
                         <a href="https://github.com/marcelmunaba/CensorBot.git" class="btn btn-light fa-brands fa-github btn-lg"></a>
                     </div>
                 </div>
@@ -257,7 +284,7 @@
                     <img src="assets/gra_screenshot.png" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">LU Zerlegung</h5>
-                    <p class="card-text">LU Decomposition (also known as LU/LR Zerlegung in German) is a method in numerical linear algebra used to decompose a square matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U), which is particularly useful for solving systems of linear equations and computing determinants.<button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapselu" aria-expanded="false" aria-controls="collapselu">
+                    <p class="card-text">LU Decomposition (also known as LU/LR Zerlegung in German) is a method in numerical linear algebra used to decompose a square matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U), which is particularly useful for solving systems of linear equations and computing determinants. <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapselu" aria-expanded="false" aria-controls="collapselu">
                         . . .
                     </button></p>
                     <div class="collapse" id="collapselu">
