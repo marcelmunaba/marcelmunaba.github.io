@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/8a197bf16f.js" crossorigin="anonymous"></script>
@@ -19,7 +21,13 @@
 <body>
     <header>
         <aside class="sidebar" id="sidebar-id">
-            <a href="#home"><i class="arrow"></i></a>
+            <button type="button" class="btn btn-primary-lg" id="sidebar-button">
+                <a href="#" style="color: inherit;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"></path>
+                      </svg>
+                </a>
+              </button>
         </aside>
     </header>
     <section class="title-section" id="home">
@@ -46,7 +54,8 @@
         <div class="">
             <h3 class="subheading-education">Technical University of Munich</h3>
             <div class="subheading-education2">B.Sc. Computer Science (Currently on the 4<sup>th</sup> Semester)<br>October 2022 - now</div>
-            <p class="grade">Grade: 2.95 - Last update : September 2023</p>
+            <p class="grade">Grade: 2.82 - Last update : March 2024</p>
+            
             <button class="course-button" onclick="courses()">Show Courses Taken</button>
             <div id="tum-courses">
                 <ul>
@@ -159,6 +168,7 @@
     <section id="Skills-and-Tools">
         <h2 class="section-title">Skills &amp; Tools</h2>
         <i class="fab fa-java" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
+        
         <i class="fab fa-git-square" id="skills" style='font-size:48px;opacity:70%;color:white'></i>
 
         <span class="icon" style="background: center / contain no-repeat url('assets/c_white.png');height: 48px;width: 48px;display:inline-block;margin-top: 3px;margin-bottom:-5px;margin-left: 10px;margin-right: 10px;opacity:70%;"></span>
@@ -175,109 +185,145 @@
     </section>
     <section id="Projects">
         <h2 class="section-title">Projects</h2>
-        <ul>
-            <li>
-                <h4>CensorBot<a href="https://github.com/marcelmunaba/CensorBot.git"><i class="fa-brands fa-github" style='margin-left: 15px;font-size:48px;opacity:70%;color:white'></i></a></h4>
-                <p>
-                    CensorBot is a simple profanity checker made using machine Learning that utilizes the Naive Bayes classifier from sklearn library.
-                </p>
-                <p>
-                    Has it ever occured to you, that you typed something in the chat while playing online video games, and it gets censored? Try it out <a class="demo" href="https://marcelmunaba.pyscriptapps.com/censorbot-demo/latest/">here!</a>
-                </p>
-                <div>
-                    <div class="cb-div">
-                        <img class="screenshot-cb1" src="assets/CensorBot/demo_clean.gif">
-                        <img class="screenshot-cb2" src="assets/CensorBot/demo_censor.gif">
-                    </div>    
-                </div>        
-                <p>
-                    Datasets are made personally by me and enlarged with help of ChatGPT.
-                </p>
-                </li>
-            </li>
-            <li>
-                <h4>Mori: Personal Money Diary</h4>
-                <p>A mobile Money Manager application written in Flutter.</p>    
-            </li>  
-            <li>
-                <h4>Slash Survivors</h4>
-                <div class="slideshow-container">
-
-                    <div class="mySlides fade">
-                      <div class="numbertext">1 / 4</div>
-                      <img src="assets/slash_survivors_screenshots/main_menu.png" style="width:100%">
-                      <div class="text">Main Menu</div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card text-bg-dark">
+                    <img src="assets/CensorBot/demo_clean.gif" class="card-img-top" alt="...">
+                    <img src="assets/CensorBot/demo_censor.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">CensorBot</h5>
+                        <p class="card-text">CensorBot is a simple profanity checker made using machine Learning that utilizes the Naive Bayes classifier from sklearn library.</p>
+                        <p class="card-text">Has it ever occured to you, that you typed something in the chat while playing online video games, and it gets censored? Try it out <a class="demo" href="https://marcelmunaba.pyscriptapps.com/censorbot-demo/latest/">here!</a></p>
+                        <p class="card-text">Datasets are made personally by me and enlarged with help of ChatGPT.</p>
+                        <a href="https://github.com/marcelmunaba/CensorBot.git" class="btn btn-light fa-brands fa-github btn-lg"></a>
                     </div>
-                    
-                    <div class="mySlides fade">
-                      <div class="numbertext">2 / 4</div>
-                      <img src="assets/slash_survivors_screenshots/mode_select.png" style="width:100%">
-                      <div class="text">Mode Select</div>
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <div class="numbertext">3 / 4</div>
-                      <img src="assets/slash_survivors_screenshots/gameplay.png" style="width:100%">
-                      <div class="text">Gameplay #1</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 4</div>
-                        <img src="assets/slash_survivors_screenshots/gameplay_2.png" style="width:100%">
-                        <div class="text">Gameplay #2</div>
-                      </div>
-                    
-                    <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a>
-                    
-                    </div>
-                    <div style="text-align:center; margin-top: 10px; margin-bottom: 10px;">
-                      <span class="dot" onclick="currentSlide(1)"></span> 
-                      <span class="dot" onclick="currentSlide(2)"></span> 
-                      <span class="dot" onclick="currentSlide(3)"></span> 
-                      <span class="dot" onclick="currentSlide(4)"></span> 
-                    </div>
-                <div style="text-align: center">
-                    <iframe frameborder="0" src="https://itch.io/embed/2296356?border_width=0&amp;dark=true" width="550" height="165"><a href="https://marcelmunaba.itch.io/slash-survivors">Slash Survivors by marcelmunaba</a></iframe>
                 </div>
-                
-                                            
-                <p>Slash Survivors is a top-down 2D pixel hack and slash game. Fight your way through endless waves of enemies and collect as much points as possible or work your way through the objectives in normal mode (currently still in development)!</p>
-                <p>Written in GDScript and made using the Godot engine.</p>
-            </li>
-            <li>
-                <h4>LU Decomposition <a href="https://github.com/marcelmunaba/LUZerlegung.git"><i class="fa-brands fa-github" style='margin-left: 15px;font-size:48px;opacity:70%;color:white'></i></a></h4>
-                <p>
-                    LU Decomposition (also known as LU/LR Zerlegung in German) is a method in numerical linear algebra used to decompose a square matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U), which is particularly useful for solving systems of linear equations and computing determinants.
-                </p>
-                <p>
-                    This project was written in C and created as a collaborative submission for the university course "Grundlagenpraktikum: Rechnerarchitektur" in groups of three.
-                </p>
-                <p>
-                    Due to copyright restrictions, the repository is not publicly accessible. However, please feel free to reach out via <a class="emailme" href="mailto:marcelmunaba@gmail.com">email</a> </a> with any inquiries you may have.
-                </p>
-                </li>
-            </li>            
-            <li>
-                <h4>Pengu Tic Tac Toe <a href="https://github.com/marcelmunaba/PenguTicTacToe"><i class="fa-brands fa-github" style='margin-left: 15px;font-size:48px;opacity:70%;color:white'></i></a></h4>
-                <p>A simple TicTacToe game (with a slight twist) in Java. Submission to my university course "PGdP" for week 9.</p>    
-            </li>
-            <li>
-                <h4>Crossy Road <a href="https://github.com/marcelmunaba/CrossyRoad-Alpha"><i class="fa-brands fa-github" style='margin-left: 15px;font-size:48px;opacity:70%;color:white'></i></a></h4>
-                <p>A simple Crossy Road game using Pygame! Many thanks to the UDEMY Course teaching game development using Pygame.</p>
-            </li>
-        </ul>
+                </div>  
+                <div class="card text-bg-dark mb-3">
+                    <img src="assets/Mori Landing Page 13g.png" style="max-height: 500px;object-fit: scale-down;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mori: Personal Money Diary</h5>
+                        <p class="card-text">A mobile Money Manager application written in Flutter.</p>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs text-bg-dark">
+                            <li class="nav-item">
+                            <a class="nav-link text-bg-danger" href="https://marcelmunaba.itch.io/slash-survivors">Play on Itch.io</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="carouselss" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselss" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselss" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselss" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselss" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/slash_survivors_screenshots/main_menu.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/slash_survivors_screenshots/mode_select.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/slash_survivors_screenshots/gameplay.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/slash_survivors_screenshots/gameplay_2.png" class="d-block w-100" alt="...">
+                        </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselss" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselss" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Slash Survivors</h5>
+                    <p class="card-text">Slash Survivors is a top-down 2D pixel hack and slash game. Fight your way through endless waves of enemies and collect as much points as possible or work your way through the objectives in normal mode (currently still in development)!</p>
+                    <p class="card-text">Written in GDScript and made using the Godot engine.</p>
+                </div>
+                </div>
+                </div>
+                <div class="col">
+                <div class="card text-bg-dark">
+                    <img src="assets/gra_screenshot.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">LU Zerlegung</h5>
+                    <p class="card-text">LU Decomposition (also known as LU/LR Zerlegung in German) is a method in numerical linear algebra used to decompose a square matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U), which is particularly useful for solving systems of linear equations and computing determinants.<button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapselu" aria-expanded="false" aria-controls="collapselu">
+                        . . .
+                    </button></p>
+                    <div class="collapse" id="collapselu">
+                        <p class="card-text">This project was written in C and created as a collaborative submission for the university course "Grundlagenpraktikum: Rechnerarchitektur" in groups of three.</p>
+                        <p class="card-text">Due to copyright restrictions, the repository is not publicly accessible. However, please feel free to reach out via <a class="emailme" href="mailto:marcelmunaba@gmail.com">email</a> </a> with any inquiries you may have.</p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/marcelmunaba/LUZerlegung.git" class="btn btn-light fa-brands fa-github btn-lg"></a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                <div class="card text-bg-dark">
+                    <div id="carouselptt" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselptt" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselptt" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="assets/PenguTicTacToe/game_snapshot1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="assets/PenguTicTacToe/game_snapshot2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselptt" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselptt" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Pengu Tic-Tac-Toe</h5>
+                    <p class="card-text">A simple TicTacToe game (with a slight twist) in Java. Submission to my university course "PGdP" for week 9.</p>
+                    <a href="https://github.com/marcelmunaba/PenguTicTacToe" class="btn btn-light fa-brands fa-github btn-lg"></a>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                <div class="card text-bg-dark">
+                    <img src="assets/crossy_road.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Crossy Road</h5>
+                    <p class="card-text">A simple Crossy Road game using Pygame! Many thanks to the UDEMY Course teaching game development using Pygame.</p>
+                    <a href="https://github.com/marcelmunaba/CrossyRoad-Alpha" class="btn btn-light fa-brands fa-github btn-lg"></a>
+                </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="Contact">
         <h2 class="section-title">Links &amp; Contact</h2>
         <!--add github, linkedin, instagram using logos-->
         <a href="https://github.com/marcelmunaba/"><i class="fa-brands fa-github" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
         <a href="https://www.linkedin.com/in/marcelmunaba"><i class="fab fa-linkedin" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
+        <a href="https://www.instagram.com/marcelmunaba"><i class="fab fa-instagram" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
         <a class="email-icon1" href="mailto:marcelmunaba@gmail.com"><i class="fas fa-envelope-square" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>
-        <a class="email-icon2" href="mailto:	marcel.munaba@tum.de"><iconify-icon icon="mdi:microsoft-outlook" style='width:42;height:48;font-size:48px;opacity:70%;color:white'></iconify-icon></a>
+        <a class="email-icon2" href="mailto:marcel.munaba@tum.de"><i class="fa-solid fa-envelope" id="skills" style='font-size:48px;opacity:70%;color:white'></i></a>        
         <a href="assets/CV Marcel-March2024.pdf"><i class="fa fa-file-pdf-o" id="cv" style='font-size:48px;opacity:70%;color:white'></i></a>
         <br>
     </section>
-    <footer>&copy; 2024 Marcel Giovanni Munaba. Made using HTML, CSS and Javascript</footer>
+    <footer>&copy; 2024 Marcel Giovanni Munaba. Made using HTML, CSS, Javascript, and Bootstrap</footer>
 </body>
 </html>
