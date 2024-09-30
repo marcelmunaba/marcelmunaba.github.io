@@ -114,47 +114,6 @@ aside ul li {
     color: #222831;
 }
 
-#cv:hover::after {
-    content: "Download CV";
-    display: inline;
-    position: absolute;
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 0px;
-    z-index: 2;
-    opacity: 1; /* Set opacity to 1 to make it fully opaque */
-    font-size: 15px; /* Adjust the font size as needed */
-    width: auto; /* Set the width to auto */
-    height: auto; /* Set the height to auto */
-    font-family: 'Manrope', sans-serif;
-    color: white;
-}
-
-.email-icon1:hover::after {
-    content: "Personal mail";
-    display: inline;
-    position: absolute;
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 0px;
-    z-index: 2;
-}
-
-.email-icon2:hover::after {
-    content: "University mail";
-    display: inline;
-    position: absolute;
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 0px;
-    z-index: 2;
-}
 
 /*Navigation Panel*/
 .navpanel {     /*nav panel container*/
