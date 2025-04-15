@@ -271,7 +271,7 @@ div.dp2 {
     }
 
     .blur-background {
-        background-image: url('../assets/picture_vertical.jpg');
+        background-image: url('../assets/picture_new.jpeg');
         background-size: contain; /* Ensure the background image covers the entire element */
         background-position: top; /* Center the background image */
         width: 100%;
