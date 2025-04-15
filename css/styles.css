@@ -52,6 +52,11 @@ ul {
     padding-left: 20px;
 }
 
+ol {
+    padding-left: 20px;
+    font-size: 1 rem;
+}
+
 footer {
     text-align: center;
     display: block;
@@ -222,7 +227,7 @@ div.dp2 {
 .name h1 {
     color: #FFC300;
     clear: both;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     margin: 5px 15px 20px;
 }
@@ -237,7 +242,7 @@ div.dp2 {
 }
 
 .blur-background {
-    background-image: url('../assets/picture_vertical.jpg');
+    background-image: url('../assets/picture_new.jpeg');
     background-size: cover; /* Ensure the background image covers the entire element */
     background-position: center; /* Center the background image */
     width: 100%;
