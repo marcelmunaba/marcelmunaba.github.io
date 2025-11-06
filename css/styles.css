@@ -414,3 +414,44 @@ p[class~="grade"] {
     flex-wrap: wrap;
     gap: 5px;
 }
+
+/* --- Fixed card height + expandable text for Projects --- */
+:root { 
+  /* This will be measured from Mahlzeit!'s text on load and updated via JS */
+  --card-clip-height: 12rem; 
+}
+
+#Projects .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clamp the text to a fixed height; reveal when expanded */
+.card-text-clip {
+  position: relative;
+  overflow: hidden;
+  max-height: var(--card-clip-height);
+}
+
+/* Fade-out edge when clipped */
+.card-text-clip:not(.expanded)::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3rem;
+  background: linear-gradient(180deg, rgba(49,54,63,0), rgba(49,54,63,1));
+  pointer-events: none;
+}
+
+/* Expanded state removes height cap */
+.card-text-clip.expanded {
+  max-height: none;
+}
+
+/* The "… more" / "Show less" button */
+.toggle-ellipsis {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  line-height: 1.1;
+}
