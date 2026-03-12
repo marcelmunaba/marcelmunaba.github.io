@@ -43,9 +43,46 @@
 }
 
 /*HTML ELEMENTS*/
+:root {
+    color-scheme: dark;
+    --bg: #1f242d;
+    --surface: #2a303a;
+    --surface-2: #31363F;
+    --text: #f5f7fb;
+    --muted: #cfd6e2;
+    --accent: #FFC300;
+    --accent-2: #D7B34D;
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    --radius: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #222831 !important;
+    background-color: var(--bg) !important;
     font-family: 'Manrope', sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    margin: 0;
+    min-width: 320px;
+}
+
+a {
+    color: inherit;
+}
+
+.page {
+    width: min(1600px, calc(100vw - clamp(24px, 5vw, 96px)));
+    margin: 0 auto;
+    padding: clamp(16px, 2vw, 28px) 0 clamp(32px, 4vw, 56px);
 }
 
 ul {
@@ -54,45 +91,43 @@ ul {
 
 ol {
     padding-left: 20px;
-    font-size: 1 rem;
+    font-size: 1rem;
 }
 
 footer {
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    color: #D7B34D;
+    margin: 24px auto 16px;
+    color: var(--accent-2);
 }
 
 section {
-    background-color: #31363F;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    margin: 5px;
+    background-color: var(--surface-2);
+    padding: clamp(18px, 2vw, 32px);
+    margin: 0 0 clamp(18px, 2vw, 28px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 section p  {
-    font-size: 1.25rem;
-    color: #FFF4F4;
+    font-size: 1.125rem;
+    color: var(--text);
 }
 
 section div {
-    color: #FFF4F4;
-    font-size: 1.25rem;
+    color: var(--text);
+    font-size: 1.125rem;
     margin-top: 5px;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
 h4 {
     clear: both;
-    font-size: 1.75rem;
-    color: #FFF4F4;
+    font-size: clamp(1.2rem, 1.8vw, 1.75rem);
+    color: var(--text);
 }
 
 aside ul li {
@@ -108,8 +143,28 @@ aside ul li {
 
 #course-button {
     font-family: inherit;
-    background-color: #D7B34D !important;
+    background-color: var(--accent-2) !important;
     color: #31363F;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+#course-button:hover {
+    background-color: #FFE066 !important;
+    color: #222831;
+}
+
+#course-button-msc {
+    font-family: inherit;
+    background-color: var(--accent-2) !important;
+    color: #31363F;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+#course-button-msc:hover {
+    background-color: #FFE066 !important;
+    color: #222831;
 }
 
 .course-button:hover {
@@ -123,17 +178,28 @@ aside ul li {
 /*Navigation Panel*/
 .navpanel {     /*nav panel container*/
     overflow: hidden;
-    background-color: #D7B34D;
+    background-color: rgba(215, 179, 77, 0.95);
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(4px, 0.7vw, 8px);
+    justify-content: center;
+    padding: clamp(6px, 1vw, 10px);
+    border-radius: 999px;
+    position: sticky;
+    top: 12px;
+    z-index: 20;
+    backdrop-filter: blur(8px);
 }
 
 .navpanel a{
     text-decoration: none; 
     display:inline-block;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 1.5rem;
+    padding: clamp(8px, 1vw, 10px) clamp(12px, 1.2vw, 16px);
+    font-size: clamp(0.92rem, 0.85rem + 0.2vw, 1rem);
     color: #31363F;
+    border-radius: 999px;
 }
 
 .navpanel a:hover {
@@ -142,23 +208,44 @@ aside ul li {
     color: #222831;
 }
 
+.navpanel a.active {
+    background-color: #FFF0B3;
+    color: #222831;
+}
+
 /* .navpanel a:active {
     text-decoration: none;
 } */
 
 #home {
-    padding-top: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero {
+    background: transparent;
+    box-shadow: none;
 }
 
 #tum-courses {
     width: 100%;
-    padding: 5px 0;
+    padding: 12px 0;
     text-align: left;
-    background-color: #222831;
+    background-color: var(--bg);
     margin-top: 20px;
-    color: #FFF4F4;
+    color: var(--text);
+    border-radius: 12px;
+}
+
+#tum-courses-msc {
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+    background-color: var(--bg);
+    margin-top: 20px;
+    color: var(--text);
+    border-radius: 12px;
 }
 
 #skills {
@@ -170,20 +257,20 @@ aside ul li {
 
 #Experience {
     list-style-type:disc;
-    color: #d3cec5;
-    font-size: 1.5rem;
+    color: var(--muted);
+    font-size: 1.25rem;
 }
 
 #Education {
     list-style-type:disc;
-    color: #d3cec5;
-    font-size: 1.5rem;
+    color: var(--muted);
+    font-size: 1.25rem;
 }
 
 #Projects {
     list-style-type:disc;
-    color: #d3cec5;
-    font-size: 1.5rem;
+    color: var(--muted);
+    font-size: 1.25rem;
 }
 
 #Projects h4 {
@@ -194,7 +281,7 @@ aside ul li {
     color: #FFE066;
 }
 #Experience p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 /*others*/
@@ -204,41 +291,42 @@ div.dp2 {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 800px;
+    height: clamp(520px, 70vh, 820px);
     width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .dp2 img {
     width: 100%;
     height: 100%;
-    object-fit:contain;
+    object-fit: cover;
     object-position: top;
     z-index: 1;
 }
 
 .name {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
-    max-height: 60%;
+    max-height: 70%;
     background-color: rgba(34, 40, 49, 0.75);
     z-index: 2;
+    backdrop-filter: blur(6px);
 }
 .name h1 {
-    color: #FFC300;
+    color: var(--accent);
     clear: both;
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3.25rem);
     text-align: center;
-    margin: 5px 15px 20px;
+    margin: 8px 16px 18px;
 }
 
 .name h4 {
-    font-size: 1.75rem;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+    margin: 10px 16px 18px;
     text-align: center;
+    color: var(--muted);
 }
 
 .blur-background {
@@ -248,7 +336,7 @@ div.dp2 {
     width: 100%;
     height: 100%;
     z-index: 0; /* Ensure the blurred background is behind the image */
-    filter: blur(20px); /* Adjust the blur intensity as needed */
+    filter: blur(24px); /* Adjust the blur intensity as needed */
     position: absolute;
     bottom: 0;
 }
@@ -304,12 +392,13 @@ div.dp2 {
         margin-right: 10px;
     }
     .short-bio {
-        margin: 5px 5px 5px 5px;
-        padding: 5px 5px 5px 5px;
+        margin: 8px;
+        padding: 6px;
         font-size: 1rem;
     }
-    .navpanel a{
-        font-size: 1rem;
+    .navpanel {
+        border-radius: 16px;
+        position: static;
     }
 }
 
@@ -334,9 +423,9 @@ p[class~="grade"] {
     padding-right:40px;
     margin-top: 0.3%;
     margin-bottom: 0.7%;
-    width: 85%;
-    color: #FFC300;
-    font-size: 3rem;
+    width: 100%;
+    color: var(--accent);
+    font-size: clamp(1.8rem, 3vw, 3rem);
 }
 
 .short-bio {
@@ -346,9 +435,12 @@ p[class~="grade"] {
     border-top-style: solid; */
     text-align: center;
     margin-top: 0%;
-    border-top: thick solid #FFF4F4;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
     padding-top: 10px;
     margin-bottom: 15px;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subheading-education {
@@ -373,20 +465,22 @@ p[class~="grade"] {
 }
 
 .sidebar {
-    opacity: 75%;
-    /* padding: 15px; */
+    opacity: 0.9;
     position: fixed;
-    right: 0;
-    bottom: 10%;
-    z-index: 5;
+    right: 16px;
+    bottom: 16px;
+    z-index: 50;
 } 
 
 #sidebar-button {
-    background-color: #FFC300;
-    position: fixed;
-    right: 0;
-    bottom: 10%;
-    z-index: 5;
+    background-color: var(--accent);
+    border-radius: 999px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: none;
+    box-shadow: var(--shadow);
 }
 
 .icon {
@@ -413,6 +507,193 @@ p[class~="grade"] {
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
+}
+
+.contact-buttons .btn {
+    margin: 6px 6px 0 0;
+    border-radius: 999px;
+}
+
+@media only screen and (min-width: 1280px) {
+    .page {
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    section {
+        width: calc(100% - 24px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #home {
+        border-radius: 0;
+    }
+
+    div.dp2 {
+        justify-content: center;
+        align-items: stretch;
+        height: clamp(560px, 68vh, 860px);
+        border-radius: 0;
+    }
+
+    .dp2 img {
+        width: min(34vw, 460px);
+        max-width: 460px;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        flex: 0 0 auto;
+    }
+
+    .blur-background {
+        filter: blur(28px);
+        transform: scale(1.06);
+    }
+
+    .name {
+        max-height: none;
+        background-color: rgba(34, 40, 49, 0.72);
+    }
+
+    .short-bio {
+        max-width: 1200px;
+        padding-left: clamp(16px, 2vw, 28px);
+        padding-right: clamp(16px, 2vw, 28px);
+    }
+
+    .navpanel {
+        position: static;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px clamp(16px, 2vw, 28px);
+        gap: clamp(12px, 1.4vw, 22px);
+    }
+
+    .navpanel a {
+        padding: 8px 12px;
+    }
+}
+
+.card.text-bg-dark {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    height: auto;
+}
+
+.card .card-body {
+    padding: 16px;
+}
+
+.card-img-top img,
+.card img.card-img-top,
+.carousel-inner img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card-img-top iframe,
+.card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 220px;
+    border: 0;
+}
+
+#Projects iframe[src*="taxirl.streamlit.app"],
+#Projects iframe[src*="censorbot.streamlit.app"] {
+    aspect-ratio: 3 / 2;
+    min-height: 260px;
+}
+
+.carousel {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+}
+
+#carouselbb .carousel-inner img {
+    object-fit: contain;
+    object-position: center;
+    background-color: #111318;
+}
+
+#carouselmz .carousel-inner img {
+    min-height: 220px;
+}
+
+#Projects img.taxirl-preview {
+    object-fit: cover;
+    object-position: top center;
+}
+
+.card img.card-img-top.project-image-natural {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.project-card-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: clamp(220px, 30vw, 360px);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.project-card-bg--mori {
+    background-image: url('../assets/Mori Landing Page 13g.png');
+}
+
+.project-card-bg .card-body {
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(31, 36, 45, 0.5);
+    backdrop-filter: blur(4px);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.btn.btn-light.fa-brands,
+.btn.btn-outline-secondary,
+.btn.btn-secondary.demo-btn {
+    border-radius: 999px;
+}
+
+.btn.btn-secondary.demo-btn {
+    background-color: var(--accent-2) !important;
+    border-color: var(--accent-2);
+    color: #31363F;
+    font-weight: 700;
+    border: none;
+    padding-inline: 14px;
+}
+
+.btn.btn-secondary.demo-btn:hover,
+.btn.btn-secondary.demo-btn:focus {
+    background-color: #FFE066 !important;
+    border-color: #FFE066;
+    color: #222831;
 }
 
 /* --- Fixed card height + expandable text for Projects --- */
