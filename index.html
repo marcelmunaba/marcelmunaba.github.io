@@ -32,10 +32,9 @@
               </button>
         </aside>
     </header>
-    <main class="page">
-    <section class="title-section hero" id="home">
+    <section class="title-section hero">
         <div class="dp2">
-            <img src="assets/picture_new.jpeg" alt="Display Photo">
+            <img src="assets/hero_alt.JPG" alt="Display Photo">
             <div class="blur-background left"></div>
             <div class="name">
                 <div style="display: flex;justify-content: center;gap: 1px;flex-wrap: wrap; margin-top: 15px;">
@@ -44,22 +43,25 @@
                     <a href="https://www.instagram.com/marcelmunaba"><i class="fab fa-instagram" id="skills" style='font-size:35px;opacity:70%;color:white'></i></a>
                 </div>
                 <h1><span style="color: white;">Hi! I'm</span> Marcel<span style="color: white;">.</span></h1>
-                <h4>CS Student at the Technical University of Munich, Germany</h4> 
-            <p class="short-bio">A computer science student at the Technical University of Munich, passionate about building software solutions that solve real problems. I'm into full-stack development, artificial intelligence, and machine learning, with a keen interest in cybersecurity. When not diving into complex systems, I explore game development as a creative outlet. Always eager to collaborate on meaningful projects.</p>
-            <nav class="navpanel navpanel--capsule">
-                <a class="active" href="#home">Home</a>
-                <a href="#Education">Education</a>
-                <a href="#Experience">Experience</a>
-                <a href="#Skills-and-Tools">Skills and Tools</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Contact">Links &amp; Contact</a>
-            </nav>
-        </section>
-    <div id="education-container"></div>
-    <div id="experience-container"></div>
-    <div id="skills-container"></div>
-    <div id="projects-container"></div>
-    <div id="contact-container"></div>
+                <h4>CS student at the Technical University of Munich, Germany</h4>
+            </div>
+        </div>
+    </section>
+    <nav class="navpanel navpanel--capsule">
+        <a class="nav-link active" href="#" onclick="showPage('home'); return false;">Home</a>
+        <a class="nav-link" href="#" onclick="showPage('education'); return false;">Education</a>
+        <a class="nav-link" href="#" onclick="showPage('experience'); return false;">Experience</a>
+        <a class="nav-link" href="#" onclick="showPage('projects'); return false;">Projects</a>
+        <a class="nav-link" href="#" onclick="showPage('contact'); return false;">Links &amp; Contact</a>
+    </nav>
+    <main class="page">
+    <section class="page-section fade-in" id="home-content" style="display:block;">
+        <p class="short-bio">A computer science student at the Technical University of Munich, specializing in cybersecurity and machine learning. I'm deeply interested in the intersection of both fields. I also bring software engineering experience to the table, bridging the gap between research and real-world applications. When I'm not exploring these areas, I dive into game development as a creative outlet.</p>
+    </section>
+    <div id="education-container" class="page-section fade-in" style="display:none;"></div>
+    <div id="experience-container" class="page-section fade-in" style="display:none;"></div>
+    <div id="projects-container" class="page-section fade-in" style="display:none;"></div>
+    <div id="contact-container" class="page-section fade-in" style="display:none;"></div>
     </main>
     <footer>&copy; 2026 Marcel Giovanni Munaba. Made using HTML, CSS, Javascript, and Bootstrap.</footer>
     
@@ -69,8 +71,7 @@
             const sections = [
                 { id: 'education-container', file: 'sections/education.html' },
                 { id: 'experience-container', file: 'sections/experience.html' },
-                { id: 'skills-container', file: 'sections/skills.html' },
-                { id: 'projects-container', file: 'sections/projects.html' },
+                { id: 'projects-container', file: 'sections/projects_combined.html' },
                 { id: 'contact-container', file: 'sections/contact.html' }
             ];
 
@@ -79,10 +80,41 @@
                     .then(response => response.text())
                     .then(html => {
                         document.getElementById(section.id).innerHTML = html;
+                        
+                        // After content is loaded, set up Intersection Observer
+                        setupScrollAnimations();
                     })
                     .catch(error => console.error('Error loading section:', section.file, error));
             });
+            
+            // Show only home content initially
+            document.getElementById('home-content').style.display = 'block';
         });
+        
+        function setupScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animate-on-scroll class to all li items in this section
+                        const listItems = entry.target.querySelectorAll('ul > li');
+                        listItems.forEach(item => {
+                            item.classList.add('animate-on-scroll');
+                        });
+                        // Stop observing this element after animation is triggered
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.7 // Trigger when 70% of the section is visible
+            });
+            
+            // Observe Education and Experience sections
+            const educationSection = document.querySelector('#Education');
+            const experienceSection = document.querySelector('#Experience');
+            
+            if (educationSection) observer.observe(educationSection);
+            if (experienceSection) observer.observe(experienceSection);
+        }
     </script>
 </body>
 </html>

@@ -35,7 +35,7 @@
     <main class="page">
     <section class="title-section hero" id="home">
         <div class="dp2">
-            <img src="assets/picture_new.jpeg" alt="Display Photo">
+            <img src="assets/hero_alt.JPG" alt="Display Photo">
             <div class="blur-background left"></div>
             <div class="name">
                 <div style="display: flex;justify-content: center;gap: 1px;flex-wrap: wrap; margin-top: 15px;">
@@ -412,7 +412,10 @@
                 </div>
             </div>
                 <div class="col">
-                    <div class="card text-bg-dark mb-3 project-card-bg project-card-bg--mori">
+                    <div class="card text-bg-dark">
+                        <div class="card-img-top">
+                            <img src="assets/Mori Landing Page 13g.png" class="d-block w-100" alt="Mori preview">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Mori: Personal Money Diary <span class="icon" style="background: center / contain no-repeat url('assets/icon_flutter_solid.png');height: 25px;width: 20px;display:inline-block;opacity:70%;"></span></h5>
                             <p class="card-text">A mobile Money Manager application written in Flutter, currently in its development phase. Designed to help users efficiently manage their finances with ease and convenience, whose main functionalities include bill splitting and comprehensive money management.</p>
@@ -522,13 +525,9 @@
                     <img src="assets/gra_screenshot.png" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">LU Zerlegung <span class="icon" style="background: center / contain no-repeat url('assets/c_white.png');height: 30px;width: 30px;display:inline-block;opacity:70%;"></span></h5>
-                    <p class="card-text">LU Decomposition (also known as LU/LR Zerlegung in German) is a method in numerical linear algebra used to decompose a square matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U), which is particularly useful for solving systems of linear equations and computing determinants. <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapselu" aria-expanded="false" aria-controls="collapselu">
-                        . . .
+                    <p class="card-text">LU Decomposition (also known as LU/LR Zerlegung in German) is a method in numerical linear algebra used to decompose a square matrix into the product of a lower triangular matrix (L) and an upper triangular matrix (U), which is particularly useful for solving systems of linear equations and computing determinants. <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#luZerlegungModal">
+                        show more
                     </button></p>
-                    <div class="collapse" id="collapselu">
-                        <p class="card-text">This project was written in C and created as a collaborative submission for the university course "Grundlagenpraktikum: Rechnerarchitektur" in groups of three.</p>
-                        <p class="card-text">Due to copyright restrictions, the repository is not publicly accessible. However, please feel free to reach out via <a class="emailme" href="mailto:marcelmunaba@gmail.com">email</a> </a> with any inquiries you may have.</p>
-                    </div>
                     <div>
                         <a href="https://github.com/marcelmunaba/LUZerlegung.git" class="btn btn-light fa-brands fa-github btn-lg"></a>
                     </div>
@@ -578,6 +577,22 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal for LU Zerlegung -->
+    <div class="modal fade" id="luZerlegungModal" tabindex="-1" aria-labelledby="luZerlegungModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This project was written in C and created as a collaborative submission for the university course "Grundlagenpraktikum: Rechnerarchitektur" in groups of three.</p>
+                    <p>Due to copyright restrictions, the repository is not publicly accessible. However, please feel free to reach out via <a class="emailme" href="mailto:marcelmunaba@gmail.com">email</a> with any inquiries you may have.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="Contact">
         <h2 class="section-title">Links &amp; Contact</h2>
         <div class="btn-group btn-group-lg flex-wrap contact-buttons" role="group" aria-label="Links">
