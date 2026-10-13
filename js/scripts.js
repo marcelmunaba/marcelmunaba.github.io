@@ -42,3 +42,10 @@ function showPage(pageId) {
         event.target.classList.add('active');
     }
 }
+
+// Build mailto links at runtime so addresses never appear in the markup
+function setupEmailLinks(root) {
+    root.querySelectorAll('a[data-email-user]').forEach(link => {
+        link.href = 'mailto:' + link.dataset.emailUser + '@' + link.dataset.emailDomain;
+    });
+}
