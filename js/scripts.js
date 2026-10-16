@@ -30,7 +30,6 @@ function showPage(pageId) {
             void homeContent.offsetWidth;
             homeContent.classList.add('fade-in');
         }
-        event.target.classList.add('active');
     } else {
         const container = document.getElementById(pageId + '-container');
         if (container) {
@@ -39,8 +38,8 @@ function showPage(pageId) {
             void container.offsetWidth;
             container.classList.add('fade-in');
         }
-        event.target.classList.add('active');
     }
+    document.querySelector('.navpanel [data-page="' + pageId + '"]').classList.add('active');
 }
 
 // Build mailto links at runtime so addresses never appear in the markup
