@@ -184,6 +184,12 @@ section p  {
     color: var(--text);
 }
 
+/* keep long text readable on wide screens */
+section p,
+section li {
+    max-width: 75ch;
+}
+
 section div {
     color: var(--text);
     font-size: clamp(1.125rem, 1.5vw, 1.5rem);
