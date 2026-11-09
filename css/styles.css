@@ -296,8 +296,13 @@ a {
     color: var(--dim);
 }
 
+.now__cat {
+    padding: 18px 20px 0;
+    text-transform: none;
+}
+
 .now__list {
-    padding: 8px 20px;
+    padding: 0 20px 8px;
 }
 
 .now__list > div {
@@ -421,16 +426,30 @@ a {
 .stat strong {
     display: block;
     font-weight: 400;
-    font-size: clamp(4.5rem, 11vw, 10rem);
+    font-size: clamp(3.75rem, 7.5vw, 7rem);
     line-height: 1;
     letter-spacing: -0.06em;
     margin: 0.12em 0 0.18em -0.05em;
 }
 
-.intro__stat {
+.intro__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: clamp(32px, 4vw, 56px);
-    padding-top: clamp(24px, 3vw, 32px);
     border-top: 1px solid var(--line);
+}
+
+.intro__stats .stat {
+    padding-top: clamp(24px, 3vw, 32px);
+}
+
+.intro__stats .stat + .stat {
+    padding-left: clamp(20px, 3vw, 40px);
+    border-left: 1px solid var(--line);
+}
+
+.intro__stats .stat:first-child {
+    padding-right: clamp(20px, 3vw, 40px);
 }
 
 .stat p {
