@@ -5,23 +5,15 @@ function setupEmailLinks(root) {
     });
 }
 
-// Live Munich time in the hero bar
-function startClock(el) {
+// "Updated" date in the hero bar: GitHub Pages sends the deploy time as Last-Modified,
+// so the month follows each publish. The month in the markup is the fallback.
+function showLastUpdated(el) {
     if (!el) return;
-    const format = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/Berlin',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    });
-    const tick = () => {
-        const now = new Date();
-        el.textContent = format.format(now);
-        el.dateTime = now.toISOString();
-    };
-    tick();
-    setInterval(tick, 1000);
+    const modified = new Date(document.lastModified);
+    // Without the header, browsers report "now"; ignore that so the fallback stays
+    if (isNaN(modified) || Date.now() - modified.getTime() < 60 * 1000) return;
+    el.textContent = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' }).format(modified);
+    el.dateTime = modified.toISOString().slice(0, 7);
 }
 
 // Fade elements in as they scroll into view
@@ -263,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMoreToggles();
     setupShell();
     setupDialogs();
-    startClock(document.getElementById('clock'));
+    showLastUpdated(document.getElementById('updated'));
     setupReveal();
     setupTopbar();
 });
