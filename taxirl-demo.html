@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; script-src 'none'; frame-src https://taxirl.streamlit.app">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>TaxiRL Demo | Marcel Giovanni Munaba</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="css/demo.css" rel="stylesheet">
 </head>
 <body>
     <div class="demo-layout">
         <header class="demo-topbar">
-            <a href="index.html#Projects">← Back to Projects</a>
+            <a href="index.html#projects">← Back to projects</a>
             <strong>TaxiRL Demo</strong>
             <a href="https://taxirl.streamlit.app/" target="_blank" rel="noopener noreferrer">Open on Streamlit ↗</a>
         </header>
         <main class="demo-shell">
-            <iframe
-                title="TaxiRL Demo"
-                src="https://taxirl.streamlit.app/?embed=true&embed_options=dark_theme"
-                loading="lazy"></iframe>
+            <div class="demo-window">
+                <div class="demo-window__head" aria-hidden="true">
+                    <span>~/marcel/taxirl</span>
+                    <span>taxirl.streamlit.app</span>
+                </div>
+                <iframe
+                    title="TaxiRL Demo"
+                    src="https://taxirl.streamlit.app/?embed=true&embed_options=dark_theme"
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
         </main>
     </div>
 </body>
