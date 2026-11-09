@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; script-src 'none'; frame-src https://taxirl.streamlit.app">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>TaxiRL Demo | Marcel Giovanni Munaba</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +27,9 @@
                 <iframe
                     title="TaxiRL Demo"
                     src="https://taxirl.streamlit.app/?embed=true&embed_options=dark_theme"
-                    loading="lazy"></iframe>
+                    loading="lazy"
+                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
         </main>
     </div>
