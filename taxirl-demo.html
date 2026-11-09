@@ -6,21 +6,27 @@
     <title>TaxiRL Demo | Marcel Giovanni Munaba</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="css/demo.css" rel="stylesheet">
 </head>
 <body>
     <div class="demo-layout">
         <header class="demo-topbar">
-            <a href="index.html#Projects">← Back to Projects</a>
+            <a href="index.html#projects">← Back to projects</a>
             <strong>TaxiRL Demo</strong>
             <a href="https://taxirl.streamlit.app/" target="_blank" rel="noopener noreferrer">Open on Streamlit ↗</a>
         </header>
         <main class="demo-shell">
-            <iframe
-                title="TaxiRL Demo"
-                src="https://taxirl.streamlit.app/?embed=true&embed_options=dark_theme"
-                loading="lazy"></iframe>
+            <div class="demo-window">
+                <div class="demo-window__head" aria-hidden="true">
+                    <span>~/marcel/taxirl</span>
+                    <span>taxirl.streamlit.app</span>
+                </div>
+                <iframe
+                    title="TaxiRL Demo"
+                    src="https://taxirl.streamlit.app/?embed=true&embed_options=dark_theme"
+                    loading="lazy"></iframe>
+            </div>
         </main>
     </div>
 </body>
