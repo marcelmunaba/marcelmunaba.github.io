@@ -631,6 +631,7 @@ html:not(.js) .carousel__btns {
 .tech-icon--nodedotjs { --icon: url("../assets/icons/tech/nodedotjs.svg"); }
 .tech-icon--postgresql { --icon: url("../assets/icons/tech/postgresql.svg"); }
 .tech-icon--python { --icon: url("../assets/icons/tech/python.svg"); }
+.tech-icon--ansible { --icon: url("../assets/icons/tech/ansible.svg"); }
 .tech-icon--swift { --icon: url("../assets/icons/tech/swift.svg"); }
 
 .card__meta > span:first-child {
@@ -657,8 +658,6 @@ html:not(.js) .carousel__btns {
     flex: none;
     width: 0.95em;
     height: 0.95em;
-    border-radius: 15%;
-    box-shadow: 0 0 0 1px var(--line-strong);
 }
 
 .card__desc {

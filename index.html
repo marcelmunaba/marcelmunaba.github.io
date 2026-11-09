@@ -161,9 +161,24 @@
             <h2 class="section__title label">Selected projects</h2>
             <ol class="cards">
                 <li class="card" id="project-benchbit" data-reveal>
-                    <div class="card__media"><img src="assets/projects/benchbit/card.webp" width="1200" height="750" loading="lazy" alt="BenchBit command-line banner"></div>
-                    <p class="card__meta label"><span>01</span><span class="card__stack"><span class="stack__item"><i class="tech-icon tech-icon--python" aria-hidden="true"></i>Python</span><span class="stack__sep" aria-hidden="true">·</span><span class="stack__item">Thesis</span></span></p>
-                    <h3 class="card__title"><img class="card__icon" src="assets/projects/benchbit/icon.webp" width="192" height="192" alt="">BenchBit</h3>
+                    <div class="card__media carousel" role="group" aria-roledescription="carousel" aria-label="BenchBit Explorer screenshots">
+                        <div class="carousel__track" tabindex="0">
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 5"><img src="assets/projects/benchbit/card.webp" width="1200" height="750" loading="lazy" alt="BenchBit Explorer overview with the Pareto-optimal configurations chart and trilemma triangle"></div>
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 5"><img src="assets/projects/benchbit/card-2.webp" width="1200" height="750" loading="lazy" alt="BenchBit Explorer Pareto analysis of throughput against Shannon entropy"></div>
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 5"><img src="assets/projects/benchbit/card-3.webp" width="1200" height="750" loading="lazy" alt="BenchBit Explorer parameter effects chart of throughput by block interval and node count"></div>
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 5"><img src="assets/projects/benchbit/card-4.webp" width="1200" height="750" loading="lazy" alt="BenchBit Explorer configuration details panel with per-run metrics"></div>
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="5 of 5"><img src="assets/projects/benchbit/card-5.webp" width="1200" height="750" loading="lazy" alt="BenchBit Explorer guide explaining the blockchain trilemma"></div>
+                        </div>
+                        <div class="carousel__controls">
+                            <span class="carousel__count label">01 / 05</span>
+                            <span class="carousel__btns">
+                                <button class="carousel__btn" type="button" data-dir="-1" aria-label="Previous screenshot">←</button>
+                                <button class="carousel__btn" type="button" data-dir="1" aria-label="Next screenshot">→</button>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="card__meta label"><span>01</span><span class="card__stack"><span class="stack__item"><i class="tech-icon tech-icon--python" aria-hidden="true"></i>Python</span><span class="stack__sep" aria-hidden="true">·</span><span class="stack__item"><i class="tech-icon tech-icon--ansible" aria-hidden="true"></i>Ansible</span><span class="stack__sep" aria-hidden="true">·</span><span class="stack__item">Thesis</span></span></p>
+                    <h3 class="card__title">BenchBit<img class="card__icon" src="assets/projects/benchbit/icon.svg" width="64" height="64" alt=""></h3>
                     <p class="card__desc">Bitcoin testing framework built for my B.Sc. thesis on the blockchain trilemma.</p>
                     <p class="card__links label">
                         <button type="button" class="card__link-btn" data-dialog-open="abstract-benchbit" aria-haspopup="dialog">Read abstract →</button>
