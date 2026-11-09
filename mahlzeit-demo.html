@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; img-src 'self' data:; media-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; script-src 'self'; frame-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Mahlzeit! Demo | Marcel Giovanni Munaba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="css/demo.css" rel="stylesheet">
+</head>
+<body>
+    <div class="demo-layout">
+        <header class="demo-topbar">
+            <a href="index.html#projects">← Back to projects</a>
+            <strong>Mahlzeit! Demo</strong>
+            <a href="https://github.com/marcelmunaba/mahlzeit" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+        </header>
+        <main class="demo-shell">
+            <div class="demo-window">
+                <div class="demo-window__head" aria-hidden="true">
+                    <span>~/marcel/mahlzeit</span>                </div>
+                <div class="demo-video">
+                    <div class="player" data-player tabindex="0" aria-label="Mahlzeit launch video player">
+                    <div class="player__stage">
+                    <video
+                        src="assets/projects/mahlzeit/demo.mp4"
+                        poster="assets/projects/mahlzeit/demo-poster.jpg"
+                        width="1920" height="1080"
+                        autoplay muted loop playsinline controls preload="metadata"
+                        aria-label="Mahlzeit launch video: the cooking wishlist, creating Nasi Goreng by hand, rolling a random meal from TheMealDB, then checking off Nasi Goreng, adding a photo of the cooked dish and finding it in History"></video>
+                        <button class="player__big" type="button" data-big-play aria-label="Play video">
+                            <span aria-hidden="true">▶</span>
+                        </button>
+                    </div>
+                    <div class="player__bar" hidden>
+                        <button class="player__btn player__btn--play" type="button" data-play>Pause</button>
+                        <span class="player__time" data-time>00:00 / 00:24</span>
+                        <div class="player__track" data-track role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="player__fill" data-fill></div>
+                        </div>
+                        <button class="player__btn" type="button" data-mute aria-pressed="false">Sound off</button>
+                        <button class="player__btn" type="button" data-fullscreen aria-label="Full screen">⛶</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/demo-player.js" defer></script>
+</body>
+</html>
