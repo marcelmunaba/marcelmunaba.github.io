@@ -216,13 +216,26 @@
                     </p>
                 </li>
                 <li class="card" id="project-censorbot" data-reveal>
-                    <div class="card__media"><img src="assets/projects/censorbot/card.webp" width="1200" height="750" loading="lazy" alt="CensorBot chat demo"></div>
+                    <div class="card__media carousel" role="group" aria-roledescription="carousel" aria-label="CensorBot screenshots">
+                        <div class="carousel__track" tabindex="0">
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="assets/projects/censorbot/card.webp" width="1200" height="750" loading="lazy" alt="CensorBot Try it page with example prompts"></div>
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 3"><img src="assets/projects/censorbot/card-2.webp" width="1200" height="750" loading="lazy" alt="CensorBot censoring a profane message with confidence bar and word scores"></div>
+                            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 3"><img src="assets/projects/censorbot/card-3.webp" width="1200" height="750" loading="lazy" alt="CensorBot thinking bubble while classifying a message"></div>
+                        </div>
+                        <div class="carousel__controls">
+                            <span class="carousel__count label">01 / 03</span>
+                            <span class="carousel__btns">
+                                <button class="carousel__btn" type="button" data-dir="-1" aria-label="Previous screenshot">←</button>
+                                <button class="carousel__btn" type="button" data-dir="1" aria-label="Next screenshot">→</button>
+                            </span>
+                        </div>
+                    </div>
                     <p class="card__meta label"><span>03</span><span class="card__stack"><span class="stack__item"><i class="tech-icon tech-icon--python" aria-hidden="true"></i>Python</span><span class="stack__sep" aria-hidden="true">·</span><span class="stack__item">ML</span></span></p>
                     <h3 class="card__title">CensorBot</h3>
                     <p class="card__desc">Profanity checker using a Naive Bayes classifier.</p>
                     <p class="card__links label">
                         <a href="censorbot-demo.html">Demo</a>
-                        <a href="https://github.com/marcelmunaba/CensorBot_st" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <a href="https://github.com/marcelmunaba/CensorBot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
                     </p>
                 </li>
                 <li class="card" id="project-mahlzeit" data-reveal>
